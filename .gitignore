@@ -1,0 +1,35 @@
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Datasets
+data/
+datasets/
+preprocessed/
+*.dcm
+*.nii
+*.nii.gz
+
+# Model weights
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Training artifacts
+runs/
+weights/
+wandb/
+mlruns/
+
+# System
+.DS_Store
+Thumbs.db
