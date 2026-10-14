@@ -46,6 +46,30 @@ data/yolo/<pipeline>/labels/{train,val}/*.txt
 
 06A의 CLI `--data-dir`, `--out-root`를 지정할 수 있습니다. `--dry-run`은 원본 구현상 label_dir.mkdir를 먼저 호출하므로 디렉터리는 생성될 수 있습니다. 06B는 `--yolo-seg-dir`, `--dry-run` 옵션이 있고 06C는 실행 entrypoint가 없는 helper 모듈입니다. 외부 입력 경로와 출력 경로를 분리하여 원본 데이터를 덮어쓰지 않습니다.
 
+### 노트북 열기와 재실행 준비
+
+아래 명령은 결과 열람과 재실행을 위한 안내입니다. 현재 환경에서 실제 ARCADE 데이터로 전체 절차를 재현한 것은 아닙니다. 기존 출력 열람에는 데이터가 필요하지 않지만 재학습에는 원본 데이터와 가중치를 별도로 준비해야 합니다. 원본 데이터·학습 가중치·원본 `results.csv`는 제공된 ZIP에 없었습니다.
+
+CPU/CUDA에 맞는 PyTorch/torchvision 배포 조합을 확인한 뒤 저장소 루트에서 진행합니다. 과거 로그에 나온 버전의 현재 설치 가능 여부도 확인이 필요합니다.
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python scripts/verify_portfolio.py
+cd notebooks
+jupyter lab
+```
+
+- `01`의 `--force-reinstall opencv-python` 셀은 설치 환경을 바꿀 수 있으므로 필요 여부를 먼저 확인합니다.
+- 전처리 결과의 `data/preprocessed/` 생성 확인과 YOLO 입력의 `data/yolo/` 이미지·라벨 개수 확인은 별도 단계입니다. `03.5`의 val 이미지 누락은 후자의 기록이며, `04`에서 선택한 두 전처리를 동기화한 뒤 학습했습니다. [실험일지의 단계별 기록](experiment_summary.md)에 대상 경로와 개수를 구분했습니다.
+- `04`의 `DEVICE=0`, batch, workers를 장비에 맞게 검토합니다. 학습 셀은 명시적으로 실행합니다.
+- `05A`의 `use_manual=True`는 과거 수치를 새 집계에 덮어쓰므로 새 실험에는 `False`로 설정합니다.
+- `05B`는 `RUN_MATRIX=True`, `RUN_YOLO_SCALES=True`여서 전체 실행 시 추가 학습이 시작됩니다. 실행할 비교와 새 실험 이름을 먼저 정합니다.
+- Segmentation 변환 옵션은 `python scripts/06A_convert_coco_to_yolo_seg.py --help`로 확인합니다. Detection과 segmentation 라벨은 같은 디렉터리에 섞지 않습니다. `06C`는 두 모델과 crop helper 함수를 인자로 받는 import용 모듈입니다.
+
+원본 ZIP·전체 출력·의료영상은 저장소 밖에 보존했고 동일 해시의 중복 파일은 없었습니다. 데이터·코드·모델의 라이선스와 공개 조건은 [공개 검토 문서](publication_review.md)에 정리했습니다.
+
 ## 기록된 실패와 수정되지 않은 문제
 
 | 문제 | 증거와 다음 확인 | 정리본에서의 처리 |

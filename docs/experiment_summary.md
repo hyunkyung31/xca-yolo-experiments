@@ -1,6 +1,6 @@
 # XCA 협착 탐지 실험일지
 
-데이터를 살펴보는 작업부터 전처리, YOLO 학습, 추가 모델 비교까지 진행한 내용을 단계별로 정리했다. 노트북 11개와 Python 스크립트 3개에 남아 있는 수치와 오류를 기준으로 썼으며, 이번 문서 정리에서 다시 학습하지는 않았다. 아래의 셀 번호는 원본에서 1부터 세는 위치다.
+데이터를 살펴보는 작업부터 전처리, YOLO 학습, 추가 모델 비교까지 진행한 내용을 단계별로 정리했다. 노트북 11개와 Python 스크립트 3개에 남아 있는 수치와 오류를 기준으로 썼으며, 이번 문서 정리에서 다시 학습하지는 않았다. [README](../README.md)에서는 주요 흐름과 결과를 소개하고, 이 일지에는 설정·셀 위치·복구 과정까지 남겼다. 아래의 셀 번호는 원본에서 1부터 세는 위치다.
 
 코드와 출력이 같은 시점에 저장된 것은 아닐 수 있다. 그래서 학습 결과가 있는 작업, 실행 중 오류가 난 작업, 코드만 있고 결과가 없는 작업을 나누어 적었다. 학습을 끝낸 것과 성능이 좋아진 것도 구분했다.
 
@@ -10,7 +10,7 @@
 
 전처리에 앞서 협착 라벨이 어떻게 구성되어 있고 병변이 어느 정도 크기인지 살펴봤다. COCO JSON을 읽고 범주별 개수와 bbox 면적 분포를 확인한 다음, 이미지 5장에 bbox와 polygon을 겹쳐 표시했다.
 
-cell 15/16에는 학습 이미지 **1000장**, annotation **1625개**가 나온다. cell 21의 집계는 category 26의 협착 annotation만 1625개다. cell 25/31에서 bbox 면적 평균은 **4836.93 px²**, 중앙값은 **2782.64 px²**였다. 작은 병변 주변의 변화도 살펴볼 필요가 있어 이후 전처리 비교에서는 ROI를 함께 봤다.
+cell 15/16에는 학습 이미지 **1000장**, annotation **1625개**가 나온다. cell 21의 집계는 category 26의 협착 annotation만 1625개다. cell 25/31에서 bbox 면적 평균은 **4836.93 px²**, 중앙값은 **2782.64 px²**였다. 평균 너비는 **63.7 px**, 높이는 **66.9 px**였다. 작은 병변 주변의 변화도 살펴볼 필요가 있어 이후 전처리 비교에서는 ROI를 함께 봤다.
 
 cell 8의 총 **3000장**은 데이터 전체 검색 결과라 협착 학습 이미지 수와는 다르다. 이 데이터 분석에는 실행 결과가 남아 있다. 시각화한 의료영상 5장은 공개 권한을 확인하기 전까지 로컬에만 보존했다.
 
@@ -20,7 +20,9 @@ cell 8의 총 **3000장**은 데이터 전체 검색 결과라 협착 학습 이
 
 같은 병변을 두고 전처리별로 무엇이 달라지는지 보기 위해 bbox 주변을 padding **40**으로 잘랐다. CLAHE의 clipLimit과 tileGrid를 바꾸는 비교부터 Gamma, Frangi, Black-hat, 조합 전처리까지 시각화했다. Unsharp와 Top-hat도 탐색했다.
 
-cell 40의 최종 선택 값은 CLAHE clip **2.0**, tile **(4,4)**, Gamma **0.8**, Frangi sigmas **1..4**, Black-hat kernel **15**다. 이후 CLAHE, Gamma, Frangi, CLAHE+Gamma, CLAHE+Gamma+Frangi, Gamma+CLAHE+Frangi, Black-hat의 7종을 배치 처리했다. cell 44/45에는 각 전처리의 **train=1000, val=200**이 남아 있다.
+cell 40의 최종 선택 값은 CLAHE clip **2.0**, tile **(4,4)**, Gamma **0.8**, Frangi sigmas **1..4**, Black-hat kernel **15**다. Frangi는 `gamma=15`, `black_ridges=True`로 적용했다. 함수 기본값과 중간 튜닝 값은 최종 선택 값과 다를 수 있어 순서대로 실행해야 한다.
+
+이후 CLAHE, Gamma, Frangi, CLAHE+Gamma, CLAHE+Gamma+Frangi, Gamma+CLAHE+Frangi, Black-hat의 7종을 배치 처리했다. cell 44/45에는 각 전처리의 **train=1000, val=200**이 남아 있다. 저장 대상은 `data/preprocessed/<pipeline>/{train,val}/`이다. 이 기록은 **전처리 이미지 생성 단계**에 해당하며, YOLO 학습 폴더의 이미지·라벨 준비 여부를 검사한 결과는 아니다.
 
 Unsharp와 Top-hat은 이 7종 배치 처리나 YOLO 학습 비교까지 진행한 항목은 아니다. 전처리와 ROI를 보여 주는 의료영상 포함 시각화 12개는 비공개로 보존했다.
 
@@ -28,9 +30,17 @@ Unsharp와 Top-hat은 이 7종 배치 처리나 YOLO 학습 비교까지 진행�
 
 관련 노트북: `03_quality_metrics.ipynb`
 
-육안 비교에 더해 영상 전체와 정답 bbox ROI에서 entropy, 표준편차 대비, Canny 경계 밀도, Laplacian variance, Brenner focus를 계산했다. cell 5에는 학습 이미지 **1000개**를 평가한 기록이 있고, cell 7에는 원본을 포함한 8개 전처리의 평균 표와 그래프가 있다.
+육안 비교에 더해 영상 전체와 정답 bbox ROI에서 entropy, 표준편차 대비, Canny 경계 밀도(50/150), Laplacian variance, Brenner focus를 계산했다. 한 이미지 안의 병변별 평균을 먼저 구한 뒤 이미지별 평균을 냈고, 정답 병변이 없는 이미지는 ROI 지표를 0으로 포함했다. cell 5에는 학습 이미지 **1000개**를 평가한 기록이 있고, cell 7에는 원본을 포함한 8개 전처리의 평균 표와 그래프가 있다.
 
 CLAHE의 ROI contrast는 **34.135542**, 원본은 **17.958918**이었다. 대비 지표에서는 차이가 있었지만, 선명도나 경계 지표가 커진 이유에 노이즈도 포함될 수 있다. 그래서 영상 품질 지표와 실제 탐지 결과를 나누어 비교했다.
+
+cell 7의 주요 평균 지표는 다음과 같다. 나머지 전처리를 포함한 전체 표는 [추출 CSV](../results/tables/03_quality_metrics__cell_007_output_03.csv)에 있다.
+
+| 전처리 | ROI contrast | ROI edge density | global Laplacian variance |
+|---|---:|---:|---:|
+| Original | 17.958918 | 0.074510 | 230.966124 |
+| CLAHE | 34.135542 | 0.240672 | 548.082601 |
+| CLAHE+Gamma | 32.315488 | 0.224897 | 521.803766 |
 
 품질 지표 계산과 그래프에는 실행 결과가 남아 있다. 다만 cell 9의 순위·종합 점수 계산은 미실행이므로, 그 계산까지 끝냈다고 정리하지 않았다.
 
@@ -38,13 +48,21 @@ CLAHE의 ROI contrast는 **34.135542**, 원본은 **17.958918**이었다. 대비
 
 관련 노트북: `03.5_Data Preparation.ipynb`
 
-같은 라벨을 원본과 전처리 이미지에 사용할 수 있도록 COCO bbox를 YOLO 형식으로 정규화하고, category **26→0**으로 바꿨다. 각 전처리별 이미지와 라벨을 복사한 뒤 개수를 비교했다.
+같은 라벨을 원본과 전처리 이미지에 사용할 수 있도록 COCO bbox를 YOLO 형식으로 정규화하고, category **26→0**으로 바꿨다. torchvision 쪽은 배경 class `0`, 협착 class `1`을 사용했다. 전처리 이미지 생성이 끝난 다음에는 별도로 `data/yolo/<pipeline>/images/{train,val}/`에 이미지를 복사하고 라벨을 준비해야 했다.
 
 cell 6에서 원본 이미지는 **train=1000, val=200**이었다. cell 8의 라벨 변환 결과는 학습 bbox **1625개**, 빈 라벨 **3개**, 검증 bbox **406개**, 빈 라벨 **0개**다.
 
-문제는 cell 10의 개수 확인에서 드러났다. 전처리 6종의 검증 이미지는 **0장**, 라벨은 **200개**여서 `CHECK`가 나왔다. 원본은 `OK`였지만 전처리 입력은 일부 준비가 빠진 상태였다. 초기 경로·복사 셀에는 실행 번호가 없고, 현재 코드에 있는 Black-hat도 당시 출력표에는 없어 처리 여부를 확인해야 한다.
+문제는 cell 10의 **YOLO 학습 폴더 개수 확인**에서 드러났다. 전처리 6종의 검증 이미지는 **0장**, 라벨은 **200개**여서 `CHECK`가 나왔다. 이는 `data/preprocessed/`의 이미지 생성이 아니라, 이후 `data/yolo/`에 학습 입력을 준비하는 단계의 누락 기록이다. 원본은 `OK`였지만 전처리 입력은 일부 준비가 빠진 상태였다. 초기 경로·복사 셀에는 실행 번호가 없고, 현재 코드에 있는 Black-hat도 당시 출력표에는 없어 처리 여부를 확인해야 한다.
 
 이 누락은 이후 `04`에서 학습에 사용할 CLAHE와 CLAHE+Gamma 이미지를 다시 동기화하며 해결한 기록이 있다. 다른 전처리까지 모두 복구했다고 볼 기록은 없다.
+
+단계별 경로와 기록을 나누면 다음과 같다. 두 노트북의 출력은 서로 다른 단계의 결과라, 전처리 생성 완료와 YOLO 입력 누락을 같은 작업의 성공·실패로 보지 않았다.
+
+| 단계 | 대상 경로 | 남아 있는 기록 |
+|---|---|---|
+| 전처리 이미지 생성 (`02`) | `data/preprocessed/<pipeline>/{train,val}/` | 7종 각각 train=1000, val=200 |
+| YOLO 이미지·라벨 준비 (`03.5`) | `data/yolo/<pipeline>/images/{train,val}/`, `labels/{train,val}/` | 전처리 6종의 val 이미지=0, 라벨=200으로 CHECK. 원본은 OK |
+| 선택한 입력 동기화 (`04`) | YOLO의 CLAHE·CLAHE+Gamma 이미지 폴더 | 각각 train=1000, val=200 복사 후 Original 포함 세 입력 ready=True |
 
 ## 5. 같은 YOLO11n으로 전처리 효과 비교하기
 
@@ -72,7 +90,7 @@ cell 6에서 원본 이미지는 **train=1000, val=200**이었다. cell 8의 라
 
 관련 노트북: `05B_mmdet_swin_convnext.ipynb`
 
-YOLO11n에서 전처리를 비교한 다음, 탐지기를 바꾸거나 모델 크기를 늘렸을 때도 같은 효과가 있는지 살펴봤다. 파일명에는 MMDetection, Swin, ConvNeXt가 들어 있지만 실제 구현과 실행 기록은 **torchvision Faster R-CNN**이다. 평가는 직접 구현한 VOC 11-point AP50을 사용했다.
+YOLO11n에서 전처리를 비교한 다음, 탐지기를 바꾸거나 모델 크기를 늘렸을 때도 같은 효과가 있는지 살펴봤다. 파일명에는 MMDetection, Swin, ConvNeXt가 들어 있지만 실제 구현과 실행 기록은 **torchvision Faster R-CNN**이다. 원본 노트북에는 Python 3.12 환경에서 MMCV wheel을 구하지 못해 이 방식으로 진행했다는 설명이 남아 있다. 평가는 직접 구현한 VOC 11-point AP50(score ≥ 0.05)을 사용했다.
 
 ### Faster R-CNN 결과
 
