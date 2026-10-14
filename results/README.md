@@ -46,7 +46,9 @@
 | 30 epoch / CLAHE+Gamma | [cell 008 CG](tables/05B_cell_008__frcnn_resnet50_fpn__clahe_gamma_history.csv) | 0.2909470683437324 / 4 | 0.23481221908034494 |
 | 100 epoch / CLAHE+Gamma | [cell 007 CG](tables/05B_cell_007__single_resnet50_fpn__clahe_gamma_history.csv) | 0.3109045753710932 / 4 | 0.2846165126854997 |
 
-최고값과 마지막 값은 각 history에서 계산해 [기존 요약 CSV](tables/frcnn_history_summary.csv)와 대조합니다. 30/100 epoch는 서로 다른 실행이며 같은 폴더를 재사용했던 기록을 합치지 않았습니다. Loss를 새로 추정하거나 추가하지 않았습니다.
+최고값과 마지막 값은 각 history에서 계산해 [기존 요약 CSV](tables/frcnn_history_summary.csv)와 대조합니다. 그래프의 범례에서 ◆ Best는 최초 최고값 epoch, ● Last는 마지막 epoch를 뜻하며, 아래 요약표에서도 값과 최고 epoch를 확인할 수 있습니다. 30/100 epoch는 서로 다른 실행이며 같은 폴더를 재사용했던 기록을 합치지 않았습니다. Loss를 새로 추정하거나 추가하지 않았습니다.
+
+100 epoch 실행의 최고값은 epoch 4에 나타났지만, 이 사실만으로 과적합이나 성능 정체의 원인을 확정하지 않습니다. 모델·학습 조건과 반복 실험을 함께 확인해야 합니다.
 
 ### 재생성
 
@@ -58,7 +60,7 @@ python scripts/plot_experiment_results.py
 python scripts/plot_experiment_results.py --output-dir /tmp/xca-plots
 ```
 
-기본 출력은 새 PNG 3개와 [visualization_manifest.json](figures/visualization_manifest.json)입니다. 기본 240 DPI로 품질·YOLO 그림은 2832×1200, 학습 이력은 2976×1872 픽셀입니다. Original은 청회색, CLAHE는 갈색, CLAHE+Gamma는 녹색으로 통일했습니다. 출처와 단위는 그림 하단에도 표시합니다.
+기본 출력은 새 PNG 3개와 [visualization_manifest.json](figures/visualization_manifest.json)입니다. 기본 240 DPI로 품질·YOLO 그림은 2832×1032, 학습 이력은 2976×1392 픽셀입니다. Original은 청회색, CLAHE는 갈색, CLAHE+Gamma는 녹색으로 통일했습니다. 축에는 단위를 남기고, 작은 부제·출처·해석 문구는 이 문서로 모았습니다. README의 그림은 bbox를 포함한 4개 그대로이며, 학습 이력 PNG의 세로 길이는 이전 1872픽셀에서 1392픽셀로 줄였습니다.
 
 Manifest에는 입력 CSV hash, 실제로 그린 값/epoch, 색상, 표시 단위, 소프트웨어 버전, 생성 PNG hash, 재사용 bbox PNG hash가 있습니다. 원본을 추출한 `image_manifest.json`의 범위는 기존 22개 출력 그대로이며 새 그림의 검증 정보와 구분합니다. Matplotlib/폰트 캐시는 임시 디렉터리를 사용하며 실험 코드·CSV·원본 그림은 수정하지 않습니다.
 

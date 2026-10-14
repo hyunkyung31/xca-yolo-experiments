@@ -20,7 +20,7 @@
   "figures": [
     {
       "filename": "preprocessing_roi_quality.png",
-      "sha256": "a65cca51e5b5347f13615ddf4cef2138a9365cb44b5d85280f4f4e2d9db354c6",
+      "sha256": "e017da2a2ac04c3a6c54e15b60025b75937095bebf0229f4f0c26395b7590550",
       "inputs": [
         {
           "path": "results/tables/03_quality_metrics__cell_007_output_03.csv",
@@ -54,7 +54,7 @@
     },
     {
       "filename": "yolo11n_final_validation.png",
-      "sha256": "f1fc14889f92c9c13b3f47bfe34294a851e3a294c545cea450f42d70cde462f2",
+      "sha256": "b31c00852726a6177a9b4cdeefde38aac85d7005a910ff161823fc7aa830a26c",
       "inputs": [
         {
           "path": "results/tables/yolo_best_checkpoint_validation.csv",
@@ -97,7 +97,7 @@
     },
     {
       "filename": "frcnn_ap50_history.png",
-      "sha256": "d3f48fcc9d01094e062bca89a20460dfa59e735ea2177ecabf996fe78cd6784b",
+      "sha256": "d013d93e66c1e2540e5e2ff29e5618e7ffe8a8f4bbcd0ea591e48302c062675e",
       "inputs": [
         {
           "path": "results/tables/05B_cell_008__frcnn_resnet50_fpn__original_history.csv",

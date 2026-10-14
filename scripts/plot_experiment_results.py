@@ -31,6 +31,7 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
 from matplotlib.ticker import MaxNLocator, MultipleLocator
 
 
@@ -157,7 +158,7 @@ def bars(ax: plt.Axes, labels: list[str], values: list[float], fmt: str) -> None
 
 
 def quality_figure(data: list[dict]) -> plt.Figure:
-    fig, axes = plt.subplots(1, 2, figsize=(11.8, 5.0))
+    fig, axes = plt.subplots(1, 2, figsize=(11.8, 4.3))
     labels = [row["label"] for row in data]
     bars(axes[0], labels, [row["roi_contrast"] for row in data], ".2f")
     axes[0].set_title("ROI contrast", pad=16)
@@ -168,38 +169,25 @@ def quality_figure(data: list[dict]) -> plt.Figure:
     axes[1].set_ylabel("Canny edge pixels / ROI pixels (%)")
     axes[1].yaxis.set_major_locator(MaxNLocator(5))
     fig.suptitle("Preprocessing: lesion ROI quality", fontsize=17, fontweight="semibold", y=0.97)
-    fig.text(0.5, 0.895, "Training-split means · image quality metrics, not detection AP",
-             ha="center", fontsize=10, color="#586675")
-    fig.text(0.5, 0.10, "Contrast: 8-bit intensity std · edges: Canny thresholds 50/150 · higher can include noise",
-             ha="center", fontsize=9, color="#586675")
-    fig.text(0.5, 0.045, "Source: results/tables/" + QUALITY_CSV + " · saved outputs replotted",
-             ha="center", fontsize=8.5, color="#687786")
-    fig.subplots_adjust(left=0.09, right=0.98, bottom=0.23, top=0.77, wspace=0.35)
+    fig.subplots_adjust(left=0.09, right=0.98, bottom=0.15, top=0.79, wspace=0.35)
     return fig
 
 
 def yolo_figure(data: list[dict]) -> plt.Figure:
-    fig, axes = plt.subplots(1, 2, figsize=(11.8, 5.0))
+    fig, axes = plt.subplots(1, 2, figsize=(11.8, 4.3))
     labels = [row["label"] for row in data]
     for ax, metric in zip(axes, ("mAP50", "mAP50-95")):
         bars(ax, labels, [row[metric] for row in data], ".3f")
         ax.set_title(metric, pad=16)
         ax.set_ylabel("Average precision (ratio)")
         ax.yaxis.set_major_locator(MaxNLocator(5))
-    fig.suptitle("YOLO11n: final best-checkpoint validation", fontsize=17, fontweight="semibold", y=0.97)
-    fig.text(0.5, 0.895,
-             f"{data[0]['epochs']} epochs each · validation: {data[0]['images']} images / {data[0]['instances']} instances",
-             ha="center", fontsize=10, color="#586675")
-    fig.text(0.5, 0.10, "Zero-based axes · different panel scales · rounded final validation logs, not best-epoch CSV metrics",
-             ha="center", fontsize=9, color="#586675")
-    fig.text(0.5, 0.045, "Source: results/tables/" + YOLO_CSV + " · saved outputs replotted",
-             ha="center", fontsize=8.5, color="#687786")
-    fig.subplots_adjust(left=0.08, right=0.98, bottom=0.23, top=0.77, wspace=0.3)
+    fig.suptitle("YOLO11n: final best.pt validation", fontsize=17, fontweight="semibold", y=0.97)
+    fig.subplots_adjust(left=0.08, right=0.98, bottom=0.15, top=0.79, wspace=0.3)
     return fig
 
 
 def history_figure(data: list[dict]) -> plt.Figure:
-    fig, axes = plt.subplots(1, 2, figsize=(12.4, 7.8))
+    fig, axes = plt.subplots(1, 2, figsize=(12.4, 5.8))
     upper = math.ceil(max(row["best_AP50"] for row in data) * 1.15 / 0.05) * 0.05
     for ax, length in zip(axes, (30, 100)):
         for row in (row for row in data if row["epochs_recorded"] == length):
@@ -217,11 +205,14 @@ def history_figure(data: list[dict]) -> plt.Figure:
         ax.xaxis.set_major_locator(MultipleLocator(5 if length == 30 else 20))
         ax.yaxis.set_major_locator(MultipleLocator(0.1))
         clean_axes(ax)
-        ax.legend(loc="lower right", frameon=False, fontsize=10)
-    fig.suptitle("Faster R-CNN: AP50 across epochs", fontsize=17, fontweight="semibold", y=0.97)
-    fig.text(0.5, 0.915, "ResNet50-FPN · validation IoU 0.50 · score threshold 0.05 · no smoothing",
-             ha="center", fontsize=10, color="#586675")
-    table_ax = fig.add_axes((0.08, 0.15, 0.86, 0.18))
+        handles, _ = ax.get_legend_handles_labels()
+        handles.extend([
+            Line2D([], [], linestyle="none", marker="D", color="#5B6876", markersize=6, label="Best"),
+            Line2D([], [], linestyle="none", marker="o", color="#5B6876", markersize=6, label="Last"),
+        ])
+        ax.legend(handles=handles, loc="lower right", frameon=False, fontsize=10)
+    fig.suptitle("Faster R-CNN (ResNet50-FPN): VOC AP50", fontsize=17, fontweight="semibold", y=0.97)
+    table_ax = fig.add_axes((0.08, 0.045, 0.86, 0.23))
     table_ax.axis("off")
     cells = [[f"{row['label']} / {row['epochs_recorded']} epochs", f"{row['best_AP50']:.6f}",
               str(row["best_epoch"]), f"{row['last_AP50']:.6f}"] for row in data]
@@ -238,10 +229,6 @@ def history_figure(data: list[dict]) -> plt.Figure:
             cell.set_text_props(weight="semibold")
         elif col_idx == 0:
             cell.set_text_props(color=COLORS[data[row_idx - 1]["label"]])
-    fig.text(0.5, 0.095, "Diamond: earliest maximum · circle: last epoch · 30/100-epoch runs are separate experiments",
-             ha="center", fontsize=9, color="#586675")
-    fig.text(0.5, 0.045, "Source: results/tables/05B_cell_007 / 008 history CSVs · VOC AP50 is not Ultralytics mAP50",
-             ha="center", fontsize=8.5, color="#687786")
     fig.subplots_adjust(left=0.08, right=0.97, bottom=0.43, top=0.82, wspace=0.3)
     return fig
 

@@ -64,7 +64,7 @@ ResNet50-FPN의 30 epoch 비교에서는 원본이 CLAHE+Gamma보다 높았습�
 
 ![ResNet50-FPN의 30 epoch 비교와 별도 100 epoch 실행의 VOC AP50 변화](results/figures/frcnn_ap50_history.png)
 
-왼쪽은 같은 30 epoch 조건의 Original·CLAHE+Gamma 비교, 오른쪽은 별도 100 epoch 단일 실행입니다. 저장된 이력을 그대로 연결하고 최고·마지막 AP50를 표시했으며, 이 VOC AP50를 YOLO의 mAP50와 하나의 순위로 비교하지 않았습니다.
+왼쪽은 같은 30 epoch 조건의 Original·CLAHE+Gamma 비교, 오른쪽은 별도 100 epoch 단일 실행입니다. 범례의 ◆ Best와 ● Last는 최고·마지막 AP50를 뜻하며, 정확한 값과 평가 기준은 [학습 이력 설명](results/README.md#faster-r-cnn-그림의-정확한-입력)에 정리했습니다. 이 VOC AP50를 YOLO의 mAP50와 하나의 순위로 비교하지 않았습니다.
 
 Faster R-CNN과 Ultralytics는 평가 방식이 달라 하나의 종합 순위로 해석하지 않았습니다. 실행별 기록과 평가 기준은 [실험일지](docs/experiment_summary.md)에 남겼습니다.
 
