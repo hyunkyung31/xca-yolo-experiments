@@ -2,7 +2,7 @@
 
 관상동맥 X-ray Coronary Angiography(XCA) 영상에서 협착(stenosis)을 탐지하기 위해 독립적으로 진행한 실험을 정리했습니다. ARCADE 데이터의 병변 주변을 살펴보고, 전처리와 탐지 모델을 바꾸며 성능을 비교했습니다.
 
-아래 결과는 당시 노트북에 저장된 출력에서 가져왔습니다. 이번 문서 정리에서 모델을 다시 학습하지는 않았습니다.
+아래 결과는 당시 노트북에 저장된 출력과 CSV에서 가져왔습니다. 기존 결과를 다시 시각화했으며, 새 학습이나 추론은 수행하지 않았습니다.
 
 ## 1. 프로젝트 배경
 
@@ -14,6 +14,10 @@ CLAHE, Gamma, Frangi 등 여러 전처리 방법을 적용하고, 실제로 영�
 
 추가로 Faster R-CNN과 YOLO11s까지 실험 범위를 넓혀, 전처리 방법뿐 아니라 모델 구조와 크기에 따라서도 결과가 달라지는지 살펴봤습니다.
 
+![학습 데이터의 협착 bbox 면적 분포](results/figures/01_dataset__cell_023_output_01.png)
+
+원본 노트북의 bbox 면적(너비×높이, px²) 분포를 재사용했습니다. 작은 영역에 병변이 몰린 분포는 전처리를 살펴본 배경이며, 작은 병변만의 탐지 성능이 개선됐다는 별도 평가는 없습니다.
+
 ## 2. 전처리 실험
 
 같은 병변 주변을 잘라 CLAHE의 국소 대비, Gamma의 밝기 변화, Frangi의 혈관 강조 효과를 비교했습니다. Black-hat과 조합 전처리도 살펴봤고, Unsharp와 Top-hat은 시각화로 탐색했습니다.
@@ -21,6 +25,10 @@ CLAHE, Gamma, Frangi 등 여러 전처리 방법을 적용하고, 실제로 영�
 CLAHE, Gamma, Frangi와 세 가지 조합, Black-hat의 **7종**을 배치 처리했습니다. 각 전처리의 학습 **1,000장**, 검증 **200장** 이미지가 생성된 기록을 확인했습니다. 이 결과는 `data/preprocessed/`에 이미지를 만든 단계이며, 이후 YOLO 학습 폴더로 복사하는 단계와는 구분했습니다.
 
 육안 비교에 더해 영상 전체와 정답 병변 ROI의 대비, 경계 밀도, 선명도 지표를 계산했습니다. CLAHE와 CLAHE+Gamma는 원본보다 대비와 경계 밀도를 높였습니다. 다만 노이즈도 함께 증가할 수 있어, 영상 품질 지표만으로 결론을 내리지 않고 두 전처리를 YOLO 학습에서 비교했습니다.
+
+![Original·CLAHE·CLAHE+Gamma의 병변 ROI 품질 지표](results/figures/preprocessing_roi_quality.png)
+
+대비는 ROI 픽셀 밝기의 표준편차, 경계 밀도는 Canny 경계 픽셀의 비율(%)입니다. 학습 영상의 평균 지표를 다시 그렸으며, 값이 높다고 탐지 성능이 같은 폭으로 좋아지는 것은 아닙니다.
 
 전처리별 설정과 품질 지표는 [실험일지](docs/experiment_summary.md)에 정리했습니다.
 
@@ -36,7 +44,7 @@ Original, CLAHE, CLAHE+Gamma를 사전학습 YOLO11n에서 각각 **100 epoch** 
 
 CLAHE+Gamma의 mAP50-95는 원본 대비 +0.006(0.6%p), 상대 +4.96%였습니다. 이 조건에서는 CLAHE 단독보다 CLAHE+Gamma의 결과가 높았지만, 영상 대비가 크게 올라간 것에 비하면 탐지 지표의 차이는 작았습니다.
 
-![YOLO11n의 원본·CLAHE·CLAHE+Gamma 비교](results/figures/05A_yolo11_result_aggregation__cell_006_output_01.png)
+![YOLO11n 최종 best.pt 검증의 mAP50·mAP50-95 비교](results/figures/yolo11n_final_validation.png)
 
 그래프와 표의 출처, 최종 검증과 최고 epoch 집계의 차이는 [결과 설명](results/README.md)에 정리했습니다.
 
@@ -53,6 +61,10 @@ CLAHE+Gamma의 mAP50-95는 원본 대비 +0.006(0.6%p), 상대 +4.96%였습니�
 | YOLO11n / YOLO11s, CLAHE+Gamma | 각각 50 epoch | 최종 mAP50-95 0.122 / 0.121 |
 
 ResNet50-FPN의 30 epoch 비교에서는 원본이 CLAHE+Gamma보다 높았습니다. YOLO11s도 50 epoch 조건의 mAP50-95에서 YOLO11n을 넘지 못했습니다. 전처리나 모델 크기를 바꾸는 것이 모든 조건에서 개선으로 이어지지는 않았습니다.
+
+![ResNet50-FPN의 30 epoch 비교와 별도 100 epoch 실행의 VOC AP50 변화](results/figures/frcnn_ap50_history.png)
+
+왼쪽은 같은 30 epoch 조건의 Original·CLAHE+Gamma 비교, 오른쪽은 별도 100 epoch 단일 실행입니다. 저장된 이력을 그대로 연결하고 최고·마지막 AP50를 표시했으며, 이 VOC AP50를 YOLO의 mAP50와 하나의 순위로 비교하지 않았습니다.
 
 Faster R-CNN과 Ultralytics는 평가 방식이 달라 하나의 종합 순위로 해석하지 않았습니다. 실행별 기록과 평가 기준은 [실험일지](docs/experiment_summary.md)에 남겼습니다.
 
@@ -76,3 +88,5 @@ Faster R-CNN과 Ultralytics는 평가 방식이 달라 하나의 종합 순위�
 별도 test 평가, 환자 단위 분할과 데이터 누출 검사, 여러 seed의 반복 실험, 통계적 유의성과 신뢰구간, 외부 검증, 추론 지연시간은 추가 확인이 필요합니다. 현재 결과로 임상적 효용을 검증한 것은 아닙니다. ROI 확대 방식도 정답 기반 학습 crop과 예측 기반 추론 crop의 차이, 첫 단계에서 놓친 병변을 복구하지 못하는 한계를 평가해야 합니다.
 
 단계별 진행 과정은 [실험일지](docs/experiment_summary.md), 다시 실행하기 위한 데이터 구조와 설치 절차는 [재현성 문서](docs/reproducibility.md)에 있습니다. 원본 보존과 공개 범위는 [공개 검토 문서](docs/publication_review.md)에 정리했습니다.
+
+그래프의 CSV 출처와 재생성 방법은 [결과 설명](results/README.md)에 있습니다. 원본 의료영상·데이터셋·모델 가중치는 추가하지 않았습니다.
