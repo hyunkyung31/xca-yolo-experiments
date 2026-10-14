@@ -1,0 +1,120 @@
+Historical saved outputs; not rerun during portfolio organization.
+Cell numbers are 1-based positions in the original notebook.
+Personal paths redacted; raw output objects preserved outside repository.
+
+## Cell 5, output 1 (stream)
+
+cwd            : <PROJECT_ROOT>/notebooks
+eval_split     : train
+RAW_DIR        : <PROJECT_ROOT>/data/arcade/arcade/stenosis/train/images | exists: True
+ANNO_PATH      : <PROJECT_ROOT>/data/arcade/arcade/stenosis/train/annotations/train.json | exists: True
+PREPROCESS_DIR : <PROJECT_ROOT>/data/preprocessed | exists: True
+  original                 -> <PROJECT_ROOT>/data/arcade/arcade/stenosis/train/images | png=1000 | exists=True
+  01_clahe                 -> <PROJECT_ROOT>/data/preprocessed/01_clahe/train | png=1000 | exists=True
+  02_gamma                 -> <PROJECT_ROOT>/data/preprocessed/02_gamma/train | png=1000 | exists=True
+  03_frangi                -> <PROJECT_ROOT>/data/preprocessed/03_frangi/train | png=1000 | exists=True
+  04_clahe_gamma           -> <PROJECT_ROOT>/data/preprocessed/04_clahe_gamma/train | png=1000 | exists=True
+  05_clahe_gamma_frangi    -> <PROJECT_ROOT>/data/preprocessed/05_clahe_gamma_frangi/train | png=1000 | exists=True
+  06_gamma_clahe_frangi    -> <PROJECT_ROOT>/data/preprocessed/06_gamma_clahe_frangi/train | png=1000 | exists=True
+  07_black_hat             -> <PROJECT_ROOT>/data/preprocessed/07_black_hat/train | png=1000 | exists=True
+
+
+## Cell 5, output 3 (stream)
+
+                       bbox_count  global_entropy  global_contrast  \
+pipeline
+01_clahe                    1.625        7.248269        44.132387
+02_gamma                    1.625        6.710501        37.385737
+03_frangi                   1.625        1.450660         6.751397
+04_clahe_gamma              1.625        7.102118        42.247377
+05_clahe_gamma_frangi       1.625        2.181978         7.478044
+06_gamma_clahe_frangi       1.625        2.217358         7.518191
+07_black_hat                1.625        4.427779        11.306424
+original                    1.625        6.846753        38.697224
+
+                       global_edge_density  global_laplacian_var  \
+pipeline
+01_clahe                          0.240746            548.082601
+02_gamma                          0.023785            260.728219
+03_frangi                         0.015671            163.663771
+04_clahe_gamma                    0.217447            521.803766
+05_clahe_gamma_frangi             0.029102            244.225845
+06_gamma_clahe_frangi             0.030404            251.545937
+07_black_hat                      0.018557            211.706676
+original                          0.026422            230.966124
+
+                       global_brenner_focus  roi_entropy  roi_contrast  \
+pipeline
+01_clahe                         251.485497     6.793286     34.135542
+02_gamma                          81.115837     5.774372     16.764209
+03_frangi                         45.370493     2.016651      5.876985
+04_clahe_gamma                   227.543498     6.664163     32.315488
+05_clahe_gamma_frangi             68.544119     2.731847      8.565014
+06_gamma_clahe_frangi             70.649785     2.757397      8.620384
+07_black_hat                      61.870278     5.003696     11.856169
+original                          79.514853     5.917155     17.958918
+
+                       roi_edge_density  roi_laplacian_var  roi_brenner_focus
+pipeline
+01_clahe                       0.240672         542.166385         394.086953
+02_gamma                       0.063751         110.409514          85.706464
+03_frangi                      0.038967         249.932526          85.591779
+04_clahe_gamma                 0.224897         479.316779         350.582378
+05_clahe_gamma_frangi          0.065175         421.854745         144.411336
+06_gamma_clahe_frangi          0.066283         430.055452         147.593928
+07_black_hat                   0.061074         122.227509          80.905712
+original                       0.074510         124.903015          97.326902
+saved: <PROJECT_ROOT>/notebooks/preprocessing_quality_metrics_train.csv
+
+
+## Cell 6, output 1 (stream)
+
+seaborn OK: 0.13.2
+
+
+## Cell 7, output 1 (stream)
+
+Historical seaborn FutureWarning: palette without hue; see docs/reproducibility.md.
+
+
+## Cell 7, output 3 (execute_result)
+
+                pipeline  bbox_count  global_entropy  global_contrast  \
+7               original       1.625        6.846753        38.697224
+0               01_clahe       1.625        7.248269        44.132387
+1               02_gamma       1.625        6.710501        37.385737
+2              03_frangi       1.625        1.450660         6.751397
+3         04_clahe_gamma       1.625        7.102118        42.247377
+4  05_clahe_gamma_frangi       1.625        2.181978         7.478044
+5  06_gamma_clahe_frangi       1.625        2.217358         7.518191
+6           07_black_hat       1.625        4.427779        11.306424
+
+   global_edge_density  global_laplacian_var  global_brenner_focus  \
+7             0.026422            230.966124             79.514853
+0             0.240746            548.082601            251.485497
+1             0.023785            260.728219             81.115837
+2             0.015671            163.663771             45.370493
+3             0.217447            521.803766            227.543498
+4             0.029102            244.225845             68.544119
+5             0.030404            251.545937             70.649785
+6             0.018557            211.706676             61.870278
+
+   roi_entropy  roi_contrast  roi_edge_density  roi_laplacian_var  \
+7     5.917155     17.958918          0.074510         124.903015
+0     6.793286     34.135542          0.240672         542.166385
+1     5.774372     16.764209          0.063751         110.409514
+2     2.016651      5.876985          0.038967         249.932526
+3     6.664163     32.315488          0.224897         479.316779
+4     2.731847      8.565014          0.065175         421.854745
+5     2.757397      8.620384          0.066283         430.055452
+6     5.003696     11.856169          0.061074         122.227509
+
+   roi_brenner_focus
+7          97.326902
+0         394.086953
+1          85.706464
+2          85.591779
+3         350.582378
+4         144.411336
+5         147.593928
+6          80.905712

@@ -1,0 +1,77 @@
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>pipeline</th>
+      <th>role</th>
+      <th>quant_summary</th>
+      <th>expected_effect</th>
+      <th>run_dir</th>
+      <th>P</th>
+      <th>R</th>
+      <th>mAP50</th>
+      <th>mAP50-95</th>
+      <th>best_epoch</th>
+      <th>exists</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>original</td>
+      <td>대조군 (Baseline)</td>
+      <td>원본 데이터</td>
+      <td>기본 탐지 성능 기준점</td>
+      <td>&lt;PROJECT_ROOT&gt;/runs/detect/yolo11...</td>
+      <td>0.36436</td>
+      <td>0.38424</td>
+      <td>0.31933</td>
+      <td>0.12102</td>
+      <td>74</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>clahe</td>
+      <td>실험군 1 (품질지표 1위)</td>
+      <td>ROI 대비 +90%, 윤곽선 밀도 +223%</td>
+      <td>협착 경계선 검출력 극대화</td>
+      <td>&lt;PROJECT_ROOT&gt;/runs/detect/yolo11...</td>
+      <td>0.40338</td>
+      <td>0.36700</td>
+      <td>0.32000</td>
+      <td>0.12320</td>
+      <td>86</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>clahe_gamma</td>
+      <td>실험군 2 (품질지표 2위)</td>
+      <td>ROI 대비 +80%, 윤곽선 밀도 +201%</td>
+      <td>대비 향상 + 밝기 균일화 효과 검증</td>
+      <td>&lt;PROJECT_ROOT&gt;/runs/detect/yolo11...</td>
+      <td>0.37885</td>
+      <td>0.38609</td>
+      <td>0.32762</td>
+      <td>0.12703</td>
+      <td>90</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+</div>

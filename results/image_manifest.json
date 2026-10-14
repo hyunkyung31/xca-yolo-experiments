@@ -1,0 +1,222 @@
+[
+  {
+    "notebook": "01_dataset.ipynb",
+    "cell": 23,
+    "output": 1,
+    "filename": "01_dataset__cell_023_output_01.png",
+    "sha256": "ae4b03eb91a3558d2c9518bc37e074e0fb4485b20b2c5ec6a3df938c93dfe490",
+    "bytes": 14110,
+    "publication": "aggregate_chart",
+    "public_path": "results/figures/01_dataset__cell_023_output_01.png"
+  },
+  {
+    "notebook": "01_dataset.ipynb",
+    "cell": 30,
+    "output": 1,
+    "filename": "01_dataset__cell_030_output_01.png",
+    "sha256": "eba8e68b5d7e25ee9c5c4ef7eca431b9a5f63da6bf33c8eff891e51774699af0",
+    "bytes": 222388,
+    "publication": "restricted_medical_image",
+    "public_path": null
+  },
+  {
+    "notebook": "01_dataset.ipynb",
+    "cell": 30,
+    "output": 2,
+    "filename": "01_dataset__cell_030_output_02.png",
+    "sha256": "5b8b467894b117c5bc16a06e7074877b2c11cffb759cd22ba757baccd200da78",
+    "bytes": 127509,
+    "publication": "restricted_medical_image",
+    "public_path": null
+  },
+  {
+    "notebook": "01_dataset.ipynb",
+    "cell": 30,
+    "output": 3,
+    "filename": "01_dataset__cell_030_output_03.png",
+    "sha256": "e30d48c6368af11e1cefde412dff7d849713ff6ba1d73a799732040025cfd609",
+    "bytes": 157945,
+    "publication": "restricted_medical_image",
+    "public_path": null
+  },
+  {
+    "notebook": "01_dataset.ipynb",
+    "cell": 30,
+    "output": 4,
+    "filename": "01_dataset__cell_030_output_04.png",
+    "sha256": "ef2085585da7854e63d5052f3ca08351466c26e9c7f3106f467c1533466c5fdc",
+    "bytes": 102156,
+    "publication": "restricted_medical_image",
+    "public_path": null
+  },
+  {
+    "notebook": "01_dataset.ipynb",
+    "cell": 30,
+    "output": 5,
+    "filename": "01_dataset__cell_030_output_05.png",
+    "sha256": "6e7992f2d736afbca3833b09117b6ad3832390f3a3acb27f60d76b8b395d00b6",
+    "bytes": 245065,
+    "publication": "restricted_medical_image",
+    "public_path": null
+  },
+  {
+    "notebook": "02_preprocessing.ipynb",
+    "cell": 10,
+    "output": 3,
+    "filename": "02_preprocessing__cell_010_output_03.png",
+    "sha256": "34fd9972ed923c2bd778b9b5063b0d65deb754529e7fd077c39dd58ec1375674",
+    "bytes": 200226,
+    "publication": "restricted_medical_image",
+    "public_path": null
+  },
+  {
+    "notebook": "02_preprocessing.ipynb",
+    "cell": 22,
+    "output": 1,
+    "filename": "02_preprocessing__cell_022_output_01.png",
+    "sha256": "455f29d9731981cbdd8e56c1752ade2f01476b30c96cf9d2128404073bd956b0",
+    "bytes": 579765,
+    "publication": "restricted_medical_image",
+    "public_path": null
+  },
+  {
+    "notebook": "02_preprocessing.ipynb",
+    "cell": 25,
+    "output": 1,
+    "filename": "02_preprocessing__cell_025_output_01.png",
+    "sha256": "1324263d14b014cf3814c427f32de6cef556fe93f4d51c30080b7f2faa8eb2d3",
+    "bytes": 113906,
+    "publication": "restricted_medical_image",
+    "public_path": null
+  },
+  {
+    "notebook": "02_preprocessing.ipynb",
+    "cell": 27,
+    "output": 1,
+    "filename": "02_preprocessing__cell_027_output_01.png",
+    "sha256": "e04bb127c498eeae0a5ccedbec95d55349a33bf24b4495002d6484a3e2576e0e",
+    "bytes": 130487,
+    "publication": "restricted_medical_image",
+    "public_path": null
+  },
+  {
+    "notebook": "02_preprocessing.ipynb",
+    "cell": 29,
+    "output": 1,
+    "filename": "02_preprocessing__cell_029_output_01.png",
+    "sha256": "95e8d4d2dfd4d0a2779cb781a1a62c0c2980a0d7caec46789b279b085d33b1bd",
+    "bytes": 971366,
+    "publication": "restricted_medical_image",
+    "public_path": null
+  },
+  {
+    "notebook": "02_preprocessing.ipynb",
+    "cell": 32,
+    "output": 1,
+    "filename": "02_preprocessing__cell_032_output_01.png",
+    "sha256": "baa418de7636764f38f7be72f9803990a53538123d232e323a2af22398bb2ca2",
+    "bytes": 324304,
+    "publication": "restricted_medical_image",
+    "public_path": null
+  },
+  {
+    "notebook": "02_preprocessing.ipynb",
+    "cell": 34,
+    "output": 1,
+    "filename": "02_preprocessing__cell_034_output_01.png",
+    "sha256": "404d53ce91fec4601b886d27efae2b52432d825f702263453b00f3dd6f8832b7",
+    "bytes": 73830,
+    "publication": "restricted_medical_image",
+    "public_path": null
+  },
+  {
+    "notebook": "02_preprocessing.ipynb",
+    "cell": 35,
+    "output": 1,
+    "filename": "02_preprocessing__cell_035_output_01.png",
+    "sha256": "cff227dc3464c2fc22bd636d55f30bb15fbe48d009ff9949e7a65a5ba0e7caaa",
+    "bytes": 69484,
+    "publication": "restricted_medical_image",
+    "public_path": null
+  },
+  {
+    "notebook": "02_preprocessing.ipynb",
+    "cell": 36,
+    "output": 1,
+    "filename": "02_preprocessing__cell_036_output_01.png",
+    "sha256": "f2046b9936fb8f234d331af581fc0f54a32c973fe4c3a62fb84eb29138acc991",
+    "bytes": 703654,
+    "publication": "restricted_medical_image",
+    "public_path": null
+  },
+  {
+    "notebook": "02_preprocessing.ipynb",
+    "cell": 37,
+    "output": 1,
+    "filename": "02_preprocessing__cell_037_output_01.png",
+    "sha256": "31cb4f32d89dcc6d47abb789f182d4720406b02c46c909e0064f348a1406f0f4",
+    "bytes": 458093,
+    "publication": "restricted_medical_image",
+    "public_path": null
+  },
+  {
+    "notebook": "02_preprocessing.ipynb",
+    "cell": 38,
+    "output": 1,
+    "filename": "02_preprocessing__cell_038_output_01.png",
+    "sha256": "6e58c78554f6e2f4f9324e7cbeee4f12a70d5366a60f24172432d578d360a7a4",
+    "bytes": 158089,
+    "publication": "restricted_medical_image",
+    "public_path": null
+  },
+  {
+    "notebook": "02_preprocessing.ipynb",
+    "cell": 40,
+    "output": 2,
+    "filename": "02_preprocessing__cell_040_output_02.png",
+    "sha256": "bbc1cc1802f19f50f5677c9a4b82b986fbaac2de27e427c5a4243b1c6908493a",
+    "bytes": 571440,
+    "publication": "restricted_medical_image",
+    "public_path": null
+  },
+  {
+    "notebook": "03_quality_metrics.ipynb",
+    "cell": 7,
+    "output": 2,
+    "filename": "03_quality_metrics__cell_007_output_02.png",
+    "sha256": "5bd188d04fb43776726f61c09f56c5f0b4641442009a9b9cc99472fb04110e9b",
+    "bytes": 72959,
+    "publication": "aggregate_chart",
+    "public_path": "results/figures/03_quality_metrics__cell_007_output_02.png"
+  },
+  {
+    "notebook": "05A_yolo11_result_aggregation.ipynb",
+    "cell": 6,
+    "output": 1,
+    "filename": "05A_yolo11_result_aggregation__cell_006_output_01.png",
+    "sha256": "6fa5897867359c7d79038ad6709511c2cfae589378893c939ce3b7dd4da485d6",
+    "bytes": 43804,
+    "publication": "aggregate_chart",
+    "public_path": "results/figures/05A_yolo11_result_aggregation__cell_006_output_01.png"
+  },
+  {
+    "notebook": "05E_compare_all_results.ipynb",
+    "cell": 6,
+    "output": 1,
+    "filename": "05E_compare_all_results__cell_006_output_01.png",
+    "sha256": "a68b46600225cb2b0ac9411ed42f8d3bc47c2da4986014e64c71fb1344618ef5",
+    "bytes": 39795,
+    "publication": "aggregate_chart",
+    "public_path": "results/figures/05E_compare_all_results__cell_006_output_01.png"
+  },
+  {
+    "notebook": "05E_compare_all_results.ipynb",
+    "cell": 7,
+    "output": 1,
+    "filename": "05E_compare_all_results__cell_007_output_01.png",
+    "sha256": "0ac0caabcda57675769ea853943e9db0108760083b833188f2c6014962eb2573",
+    "bytes": 18169,
+    "publication": "aggregate_chart",
+    "public_path": "results/figures/05E_compare_all_results__cell_007_output_01.png"
+  }
+]

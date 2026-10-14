@@ -1,0 +1,7 @@
+pipeline,clahe,clahe_gamma,original
+model,,,
+mobilenet_v3_large_fpn,NaN,0.1859,NaN
+resnet50_fpn,NaN,0.2909,0.2957
+resnet50_fpn_v2,NaN,0.2685,NaN
+yolo11n,0.3296,0.3458,0.3193
+yolo11s,NaN,0.3097,NaN

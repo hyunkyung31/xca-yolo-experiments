@@ -33,3 +33,52 @@ mlruns/
 # System
 .DS_Store
 Thumbs.db
+
+# Local originals and restricted evidence (never publish medical source/crops)
+attachments/
+original/
+originals/
+private_outputs/
+restricted/
+private/
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.rar
+
+# Additional dataset / patient-level annotation formats
+*.nii.bz2
+*.mha
+*.mhd
+*.nrrd
+*.dicom
+*.h5
+*.hdf5
+*.npy
+*.npz
+**/images/
+**/labels/
+**/annotations/
+
+# Additional weights / experiment outputs
+models/
+*.safetensors
+*.engine
+*.tflite
+tv_backbone_exps/
+custom_yolo11/
+*.cache
+*.log
+
+# Private configuration and transient Python artifacts
+*.pem
+*.key
+.jupyter/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Notebooks historically emit detailed CSVs into notebooks/; curated tables
+# are exported explicitly under results/tables/.
+notebooks/*.csv

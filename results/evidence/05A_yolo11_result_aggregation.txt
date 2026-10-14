@@ -1,0 +1,74 @@
+Historical saved outputs; not rerun during portfolio organization.
+Cell numbers are 1-based positions in the original notebook.
+Personal paths redacted; raw output objects preserved outside repository.
+
+## Cell 2, output 1 (stream)
+
+RUNS_DIR: <PROJECT_ROOT>/runs/detect
+exists  : True
+
+
+## Cell 3, output 1 (execute_result)
+
+      pipeline             role              quant_summary  \
+0     original   대조군 (Baseline)                     원본 데이터
+1        clahe  실험군 1 (품질지표 1위)  ROI 대비 +90%, 윤곽선 밀도 +223%
+2  clahe_gamma  실험군 2 (품질지표 2위)  ROI 대비 +80%, 윤곽선 밀도 +201%
+
+        expected_effect                                            run_dir  \
+0          기본 탐지 성능 기준점  <PROJECT_ROOT>/runs/detect/yolo11...
+1        협착 경계선 검출력 극대화  <PROJECT_ROOT>/runs/detect/yolo11...
+2  대비 향상 + 밝기 균일화 효과 검증  <PROJECT_ROOT>/runs/detect/yolo11...
+
+         P        R    mAP50  mAP50-95  best_epoch  exists
+0  0.36436  0.38424  0.31933   0.12102          74    True
+1  0.40338  0.36700  0.32000   0.12320          86    True
+2  0.37885  0.38609  0.32762   0.12703          90    True
+
+## Cell 4, output 1 (execute_result)
+
+      pipeline             role              quant_summary  \
+0     original   대조군 (Baseline)                     원본 데이터
+1        clahe  실험군 1 (품질지표 1위)  ROI 대비 +90%, 윤곽선 밀도 +223%
+2  clahe_gamma  실험군 2 (품질지표 2위)  ROI 대비 +80%, 윤곽선 밀도 +201%
+
+        expected_effect                                            run_dir  \
+0          기본 탐지 성능 기준점  <PROJECT_ROOT>/runs/detect/yolo11...
+1        협착 경계선 검출력 극대화  <PROJECT_ROOT>/runs/detect/yolo11...
+2  대비 향상 + 밝기 균일화 효과 검증  <PROJECT_ROOT>/runs/detect/yolo11...
+
+       P      R  mAP50  mAP50-95  best_epoch  exists
+0  0.364  0.387   0.32     0.121          74    True
+1  0.381  0.390   0.32     0.123          86    True
+2  0.381  0.387   0.33     0.127          90    True
+
+## Cell 5, output 1 (stream)
+
+ rank_mAP50-95    pipeline            role     P     R  mAP50  mAP50-95  delta_mAP50-95  rel_mAP50-95_%
+             1 clahe_gamma 실험군 2 (품질지표 2위) 0.381 0.387   0.33     0.127           0.006            4.96
+             2       clahe 실험군 1 (품질지표 1위) 0.381 0.390   0.32     0.123           0.002            1.65
+             3    original  대조군 (Baseline) 0.364 0.387   0.32     0.121           0.000            0.00
+saved: <PROJECT_ROOT>/notebooks/yolo11n_pipeline_comparison.csv
+
+
+## Cell 5, output 2 (execute_result)
+
+   rank_mAP50-95     pipeline             role      P      R  mAP50  mAP50-95  \
+0              1  clahe_gamma  실험군 2 (품질지표 2위)  0.381  0.387   0.33     0.127
+1              2        clahe  실험군 1 (품질지표 1위)  0.381  0.390   0.32     0.123
+2              3     original   대조군 (Baseline)  0.364  0.387   0.32     0.121
+
+   delta_mAP50-95  rel_mAP50-95_%
+0           0.006            4.96
+1           0.002            1.65
+2           0.000            0.00
+
+## Cell 7, output 1 (stream)
+
+Winner by mAP50-95: clahe_gamma
+pipeline              clahe_gamma
+role              실험군 2 (품질지표 2위)
+mAP50                        0.33
+mAP50-95                    0.127
+delta_mAP50-95              0.006
+rel_mAP50-95_%               4.96

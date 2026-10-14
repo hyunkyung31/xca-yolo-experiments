@@ -1,0 +1,4 @@
+,pipeline,role,quant_summary,expected_effect
+0,original,대조군 (Baseline),원본 데이터,기본 탐지 성능 기준점
+1,clahe,실험군 1 (1위),"ROI 대비 +90%, 윤곽선 밀도 +223%",협착 경계선 검출력 극대화
+2,clahe_gamma,실험군 2 (2위),"ROI 대비 +80%, 윤곽선 밀도 +201%",대비 향상 + 밝기 균일화 효과 검증

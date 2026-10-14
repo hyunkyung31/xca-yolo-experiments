@@ -1,0 +1,96 @@
+Historical saved outputs; not rerun during portfolio organization.
+Cell numbers are 1-based positions in the original notebook.
+Personal paths redacted; raw output objects preserved outside repository.
+
+## Cell 3, output 1 (stream)
+
+PROJECT_DIR: <PROJECT_ROOT>
+YOLO_DIR   : <PROJECT_ROOT>/data/yolo
+MODEL_CKPT : yolo11n.pt
+
+
+## Cell 4, output 1 (stream)
+
+clahe: copied train=1000, val=200
+clahe_gamma: copied train=1000, val=200
+
+
+## Cell 5, output 1 (execute_result)
+
+      pipeline  img_train  lbl_train  img_val  lbl_val  ready  \
+0     original       1000       1000      200      200   True
+1        clahe       1000       1000      200      200   True
+2  clahe_gamma       1000       1000      200      200   True
+
+                                                yaml
+0  <PROJECT_ROOT>/data/yolo/original...
+1  <PROJECT_ROOT>/data/yolo/clahe/da...
+2  <PROJECT_ROOT>/data/yolo/clahe_ga...
+
+## Cell 6, output 1 (stream)
+
+All selected pipelines are ready.
+
+
+## Cell 7, output 1 (stream)
+
+===== Training: original =====
+data: <PROJECT_ROOT>/data/yolo/original/data.yaml
+Ultralytics 8.4.110 🚀 Python-3.12.6 torch-2.13.0+cu130 CUDA:0 (NVIDIA GeForce RTX 5090, 32111MiB)
+Downloading https://ultralytics.com/assets/Arial.ttf to '<USER_CONFIG>/Ultralytics/Arial.ttf': 100% ━━━━━━━━━━━━ 755.1KB 32.3MB/s 0.0s
+100 epochs completed in 0.070 hours.
+Validating <PROJECT_ROOT>/runs/detect/yolo11n_original/weights/best.pt...
+                   all        200        406      0.364      0.387       0.32      0.121
+Ultralytics 8.4.110 🚀 Python-3.12.6 torch-2.13.0+cu130 CUDA:0 (NVIDIA GeForce RTX 5090, 32111MiB)
+Results saved to <PROJECT_ROOT>/runs/detect/yolo11n_original
+===== Training: clahe =====
+data: <PROJECT_ROOT>/data/yolo/clahe/data.yaml
+Ultralytics 8.4.110 🚀 Python-3.12.6 torch-2.13.0+cu130 CUDA:0 (NVIDIA GeForce RTX 5090, 32111MiB)
+100 epochs completed in 0.070 hours.
+Validating <PROJECT_ROOT>/runs/detect/yolo11n_clahe/weights/best.pt...
+                   all        200        406      0.381       0.39       0.32      0.123
+Ultralytics 8.4.110 🚀 Python-3.12.6 torch-2.13.0+cu130 CUDA:0 (NVIDIA GeForce RTX 5090, 32111MiB)
+Results saved to <PROJECT_ROOT>/runs/detect/yolo11n_clahe
+===== Training: clahe_gamma =====
+data: <PROJECT_ROOT>/data/yolo/clahe_gamma/data.yaml
+Ultralytics 8.4.110 🚀 Python-3.12.6 torch-2.13.0+cu130 CUDA:0 (NVIDIA GeForce RTX 5090, 32111MiB)
+100 epochs completed in 0.070 hours.
+Validating <PROJECT_ROOT>/runs/detect/yolo11n_clahe_gamma/weights/best.pt...
+                   all        200        406      0.381      0.387       0.33      0.127
+Ultralytics 8.4.110 🚀 Python-3.12.6 torch-2.13.0+cu130 CUDA:0 (NVIDIA GeForce RTX 5090, 32111MiB)
+Results saved to <PROJECT_ROOT>/runs/detect/yolo11n_clahe_gamma
+
+
+## Cell 7, output 2 (execute_result)
+
+      pipeline             run_name  \
+0     original     yolo11n_original
+1        clahe        yolo11n_clahe
+2  clahe_gamma  yolo11n_clahe_gamma
+
+                                            save_dir  \
+0  <PROJECT_ROOT>/runs/detect/yolo11...
+1  <PROJECT_ROOT>/runs/detect/yolo11...
+2  <PROJECT_ROOT>/runs/detect/yolo11...
+
+                                        weights_best  \
+0  <PROJECT_ROOT>/runs/detect/yolo11...
+1  <PROJECT_ROOT>/runs/detect/yolo11...
+2  <PROJECT_ROOT>/runs/detect/yolo11...
+
+                                        weights_last
+0  <PROJECT_ROOT>/runs/detect/yolo11...
+1  <PROJECT_ROOT>/runs/detect/yolo11...
+2  <PROJECT_ROOT>/runs/detect/yolo11...
+
+## Cell 8, output 1 (execute_result)
+
+      pipeline            role              quant_summary  \
+0     original  대조군 (Baseline)                     원본 데이터
+1        clahe      실험군 1 (1위)  ROI 대비 +90%, 윤곽선 밀도 +223%
+2  clahe_gamma      실험군 2 (2위)  ROI 대비 +80%, 윤곽선 밀도 +201%
+
+        expected_effect
+0          기본 탐지 성능 기준점
+1        협착 경계선 검출력 극대화
+2  대비 향상 + 밝기 균일화 효과 검증

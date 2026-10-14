@@ -1,0 +1,4 @@
+,pipeline,role,quant_summary,expected_effect,run_dir,P,R,mAP50,mAP50-95,best_epoch,exists
+0,original,대조군 (Baseline),원본 데이터,기본 탐지 성능 기준점,<PROJECT_ROOT>/runs/detect/yolo11...,0.36436,0.38424,0.31933,0.12102,74,True
+1,clahe,실험군 1 (품질지표 1위),"ROI 대비 +90%, 윤곽선 밀도 +223%",협착 경계선 검출력 극대화,<PROJECT_ROOT>/runs/detect/yolo11...,0.40338,0.36700,0.32000,0.12320,86,True
+2,clahe_gamma,실험군 2 (품질지표 2위),"ROI 대비 +80%, 윤곽선 밀도 +201%",대비 향상 + 밝기 균일화 효과 검증,<PROJECT_ROOT>/runs/detect/yolo11...,0.37885,0.38609,0.32762,0.12703,90,True

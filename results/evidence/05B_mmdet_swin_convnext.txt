@@ -1,0 +1,1039 @@
+Historical saved outputs; not rerun during portfolio organization.
+Cell numbers are 1-based positions in the original notebook.
+Personal paths redacted; raw output objects preserved outside repository.
+
+## Cell 2, output 1 (stream)
+
+torch: 2.13.0+cu130
+cuda : 13.0 | gpu: True
+PROJECT_DIR: <PROJECT_ROOT>
+WORK       : <PROJECT_ROOT>/tv_backbone_exps
+DEVICE     : cuda
+
+
+## Cell 3, output 1 (stream)
+
+original     train=1000 (miss 0) boxes=1625 | val=200 (miss 0) boxes=406
+clahe        train=1000 (miss 0) boxes=1625 | val=200 (miss 0) boxes=406
+clahe_gamma  train=1000 (miss 0) boxes=1625 | val=200 (miss 0) boxes=406
+
+
+## Cell 4, output 1 (stream)
+
+dataset helpers ready
+
+
+## Cell 5, output 1 (stream)
+
+Available backbones: ['resnet50_fpn', 'resnet50_fpn_v2', 'mobilenet_v3_large_fpn']
+
+
+## Cell 6, output 1 (stream)
+
+evaluator ready
+
+
+## Cell 7, output 2 (stream)
+
+{'epoch': 1, 'train_loss': 0.3183477641940117, 'AP50': 0.18389888976485597, 'n_gt': 406, 'n_pred': 16964}
+
+
+## Cell 7, output 4 (stream)
+
+{'epoch': 2, 'train_loss': 0.2895199955701828, 'AP50': 0.23667749612008393, 'n_gt': 406, 'n_pred': 8569}
+
+
+## Cell 7, output 6 (stream)
+
+{'epoch': 3, 'train_loss': 0.2678940180540085, 'AP50': 0.26322041212995395, 'n_gt': 406, 'n_pred': 5296}
+
+
+## Cell 7, output 8 (stream)
+
+{'epoch': 4, 'train_loss': 0.22076605007052422, 'AP50': 0.3109045753710932, 'n_gt': 406, 'n_pred': 3277}
+
+
+## Cell 7, output 10 (stream)
+
+{'epoch': 5, 'train_loss': 0.20125644353032113, 'AP50': 0.2967136336255419, 'n_gt': 406, 'n_pred': 3058}
+
+
+## Cell 7, output 12 (stream)
+
+{'epoch': 6, 'train_loss': 0.1869465800523758, 'AP50': 0.28908087092820844, 'n_gt': 406, 'n_pred': 2679}
+
+
+## Cell 7, output 14 (stream)
+
+{'epoch': 7, 'train_loss': 0.17183616435527801, 'AP50': 0.29194141144591995, 'n_gt': 406, 'n_pred': 2477}
+
+
+## Cell 7, output 16 (stream)
+
+{'epoch': 8, 'train_loss': 0.16983809822797774, 'AP50': 0.2869754441809119, 'n_gt': 406, 'n_pred': 2457}
+
+
+## Cell 7, output 18 (stream)
+
+{'epoch': 9, 'train_loss': 0.16774526131153106, 'AP50': 0.28390858763696675, 'n_gt': 406, 'n_pred': 2362}
+
+
+## Cell 7, output 20 (stream)
+
+{'epoch': 10, 'train_loss': 0.16608029890060425, 'AP50': 0.2877053267681553, 'n_gt': 406, 'n_pred': 2365}
+
+
+## Cell 7, output 22 (stream)
+
+{'epoch': 11, 'train_loss': 0.16549405041337012, 'AP50': 0.2869659178777734, 'n_gt': 406, 'n_pred': 2369}
+
+
+## Cell 7, output 24 (stream)
+
+{'epoch': 12, 'train_loss': 0.16551736056804656, 'AP50': 0.28566706173513384, 'n_gt': 406, 'n_pred': 2367}
+
+
+## Cell 7, output 26 (stream)
+
+{'epoch': 13, 'train_loss': 0.16548359414935113, 'AP50': 0.28547494880643104, 'n_gt': 406, 'n_pred': 2367}
+
+
+## Cell 7, output 28 (stream)
+
+{'epoch': 14, 'train_loss': 0.16515732860565185, 'AP50': 0.28528582304762096, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 30 (stream)
+
+{'epoch': 15, 'train_loss': 0.16521810394525527, 'AP50': 0.28541600280158275, 'n_gt': 406, 'n_pred': 2369}
+
+
+## Cell 7, output 32 (stream)
+
+{'epoch': 16, 'train_loss': 0.16508037385344504, 'AP50': 0.28482974565994934, 'n_gt': 406, 'n_pred': 2365}
+
+
+## Cell 7, output 34 (stream)
+
+{'epoch': 17, 'train_loss': 0.16523650813102722, 'AP50': 0.28541516112693927, 'n_gt': 406, 'n_pred': 2369}
+
+
+## Cell 7, output 36 (stream)
+
+{'epoch': 18, 'train_loss': 0.1652286495268345, 'AP50': 0.2846251289245678, 'n_gt': 406, 'n_pred': 2367}
+
+
+## Cell 7, output 38 (stream)
+
+{'epoch': 19, 'train_loss': 0.1651850459575653, 'AP50': 0.2856088465760719, 'n_gt': 406, 'n_pred': 2369}
+
+
+## Cell 7, output 40 (stream)
+
+{'epoch': 20, 'train_loss': 0.16531487876176834, 'AP50': 0.28524653984681264, 'n_gt': 406, 'n_pred': 2369}
+
+
+## Cell 7, output 42 (stream)
+
+{'epoch': 21, 'train_loss': 0.1652444731593132, 'AP50': 0.28466339085095216, 'n_gt': 406, 'n_pred': 2365}
+
+
+## Cell 7, output 44 (stream)
+
+{'epoch': 22, 'train_loss': 0.16533717100322246, 'AP50': 0.28466339085095216, 'n_gt': 406, 'n_pred': 2365}
+
+
+## Cell 7, output 46 (stream)
+
+{'epoch': 23, 'train_loss': 0.16538332919776438, 'AP50': 0.28465475309146804, 'n_gt': 406, 'n_pred': 2365}
+
+
+## Cell 7, output 48 (stream)
+
+{'epoch': 24, 'train_loss': 0.16478963273763655, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 50 (stream)
+
+{'epoch': 25, 'train_loss': 0.16547010579705237, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 52 (stream)
+
+{'epoch': 26, 'train_loss': 0.16471186912059785, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 54 (stream)
+
+{'epoch': 27, 'train_loss': 0.16530560359358787, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 56 (stream)
+
+{'epoch': 28, 'train_loss': 0.16518526920676233, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 58 (stream)
+
+{'epoch': 29, 'train_loss': 0.16477130562067033, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 60 (stream)
+
+{'epoch': 30, 'train_loss': 0.16560993164777757, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 62 (stream)
+
+{'epoch': 31, 'train_loss': 0.16550832197070123, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 64 (stream)
+
+{'epoch': 32, 'train_loss': 0.16550685504078866, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 66 (stream)
+
+{'epoch': 33, 'train_loss': 0.16528587478399276, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 68 (stream)
+
+{'epoch': 34, 'train_loss': 0.16536886158585548, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 70 (stream)
+
+{'epoch': 35, 'train_loss': 0.16512909013032914, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 72 (stream)
+
+{'epoch': 36, 'train_loss': 0.16530707129836084, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 74 (stream)
+
+{'epoch': 37, 'train_loss': 0.1652301602959633, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 76 (stream)
+
+{'epoch': 38, 'train_loss': 0.16501737844944, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 78 (stream)
+
+{'epoch': 39, 'train_loss': 0.1653407526910305, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 80 (stream)
+
+{'epoch': 40, 'train_loss': 0.16512480893731118, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 82 (stream)
+
+{'epoch': 41, 'train_loss': 0.16477800273895263, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 84 (stream)
+
+{'epoch': 42, 'train_loss': 0.16546137484908105, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 86 (stream)
+
+{'epoch': 43, 'train_loss': 0.16493187764286996, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 88 (stream)
+
+{'epoch': 44, 'train_loss': 0.16506348249316216, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 90 (stream)
+
+{'epoch': 45, 'train_loss': 0.16534589728713037, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 92 (stream)
+
+{'epoch': 46, 'train_loss': 0.16513845938444138, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 94 (stream)
+
+{'epoch': 47, 'train_loss': 0.16517690831422807, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 96 (stream)
+
+{'epoch': 48, 'train_loss': 0.1653119316995144, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 98 (stream)
+
+{'epoch': 49, 'train_loss': 0.16521523961424828, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 100 (stream)
+
+{'epoch': 50, 'train_loss': 0.16501529523730277, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 102 (stream)
+
+{'epoch': 51, 'train_loss': 0.16490747186541557, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 104 (stream)
+
+{'epoch': 52, 'train_loss': 0.16526848608255387, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 106 (stream)
+
+{'epoch': 53, 'train_loss': 0.1650800340771675, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 108 (stream)
+
+{'epoch': 54, 'train_loss': 0.16555219224095344, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 110 (stream)
+
+{'epoch': 55, 'train_loss': 0.16520744657516478, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 112 (stream)
+
+{'epoch': 56, 'train_loss': 0.16517594850063325, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 114 (stream)
+
+{'epoch': 57, 'train_loss': 0.16517862585186957, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 116 (stream)
+
+{'epoch': 58, 'train_loss': 0.16496463388204574, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 118 (stream)
+
+{'epoch': 59, 'train_loss': 0.16540270963311196, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 120 (stream)
+
+{'epoch': 60, 'train_loss': 0.1650118397474289, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 122 (stream)
+
+{'epoch': 61, 'train_loss': 0.16515649926662446, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 124 (stream)
+
+{'epoch': 62, 'train_loss': 0.16499049586057662, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 126 (stream)
+
+{'epoch': 63, 'train_loss': 0.16480250623822212, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 128 (stream)
+
+{'epoch': 64, 'train_loss': 0.16506435298919678, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 130 (stream)
+
+{'epoch': 65, 'train_loss': 0.16512791657447815, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 132 (stream)
+
+{'epoch': 66, 'train_loss': 0.1649659233391285, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 134 (stream)
+
+{'epoch': 67, 'train_loss': 0.16502426567673684, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 136 (stream)
+
+{'epoch': 68, 'train_loss': 0.1651321365237236, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 138 (stream)
+
+{'epoch': 69, 'train_loss': 0.165030323818326, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 140 (stream)
+
+{'epoch': 70, 'train_loss': 0.16551822653412818, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 142 (stream)
+
+{'epoch': 71, 'train_loss': 0.16525776422023772, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 144 (stream)
+
+{'epoch': 72, 'train_loss': 0.16514682790637017, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 146 (stream)
+
+{'epoch': 73, 'train_loss': 0.16489378413558006, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 148 (stream)
+
+{'epoch': 74, 'train_loss': 0.16502841857075692, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 150 (stream)
+
+{'epoch': 75, 'train_loss': 0.16539701887965202, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 152 (stream)
+
+{'epoch': 76, 'train_loss': 0.1648535925447941, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 154 (stream)
+
+{'epoch': 77, 'train_loss': 0.16512994569540024, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 156 (stream)
+
+{'epoch': 78, 'train_loss': 0.16547172272205352, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 158 (stream)
+
+{'epoch': 79, 'train_loss': 0.16504722276329994, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 160 (stream)
+
+{'epoch': 80, 'train_loss': 0.16520591711997987, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 162 (stream)
+
+{'epoch': 81, 'train_loss': 0.1654500735104084, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 164 (stream)
+
+{'epoch': 82, 'train_loss': 0.1650085026025772, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 166 (stream)
+
+{'epoch': 83, 'train_loss': 0.16486583241820335, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 168 (stream)
+
+{'epoch': 84, 'train_loss': 0.1650842921435833, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 170 (stream)
+
+{'epoch': 85, 'train_loss': 0.16544582787156106, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 172 (stream)
+
+{'epoch': 86, 'train_loss': 0.1651206476688385, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 174 (stream)
+
+{'epoch': 87, 'train_loss': 0.1649100015461445, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 176 (stream)
+
+{'epoch': 88, 'train_loss': 0.16530840948224068, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 178 (stream)
+
+{'epoch': 89, 'train_loss': 0.16503915333747865, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 180 (stream)
+
+{'epoch': 90, 'train_loss': 0.16556473809480668, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 182 (stream)
+
+{'epoch': 91, 'train_loss': 0.16501972889900207, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 184 (stream)
+
+{'epoch': 92, 'train_loss': 0.1653282890766859, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 186 (stream)
+
+{'epoch': 93, 'train_loss': 0.16477265799045562, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 188 (stream)
+
+{'epoch': 94, 'train_loss': 0.1652078791856766, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 190 (stream)
+
+{'epoch': 95, 'train_loss': 0.16492689967155458, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 192 (stream)
+
+{'epoch': 96, 'train_loss': 0.16481532791256906, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 194 (stream)
+
+{'epoch': 97, 'train_loss': 0.16528090718388558, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 196 (stream)
+
+{'epoch': 98, 'train_loss': 0.16532042661309243, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 198 (stream)
+
+{'epoch': 99, 'train_loss': 0.1650118291079998, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+
+
+## Cell 7, output 200 (stream)
+
+{'epoch': 100, 'train_loss': 0.16487180796265602, 'AP50': 0.2846165126854997, 'n_gt': 406, 'n_pred': 2366}
+best AP50: 0.3109045753710932
+saved: <PROJECT_ROOT>/tv_backbone_exps/frcnn_resnet50_fpn__clahe_gamma/best.pt
+
+
+## Cell 8, output 2 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 1, 'train_loss': 0.3199708413481712, 'AP50': 0.16812234851835522, 'n_gt': 406, 'n_pred': 8900}
+
+
+## Cell 8, output 4 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 2, 'train_loss': 0.29425969552993775, 'AP50': 0.2090616900977115, 'n_gt': 406, 'n_pred': 7451}
+
+
+## Cell 8, output 6 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 3, 'train_loss': 0.26666543635725976, 'AP50': 0.2956856003735381, 'n_gt': 406, 'n_pred': 3844}
+
+
+## Cell 8, output 8 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 4, 'train_loss': 0.24542994275689126, 'AP50': 0.27065107568574637, 'n_gt': 406, 'n_pred': 6279}
+
+
+## Cell 8, output 10 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 5, 'train_loss': 0.21487492939829828, 'AP50': 0.28330153867546265, 'n_gt': 406, 'n_pred': 2739}
+
+
+## Cell 8, output 12 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 6, 'train_loss': 0.17844058379530905, 'AP50': 0.2783882354576692, 'n_gt': 406, 'n_pred': 2461}
+
+
+## Cell 8, output 14 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 7, 'train_loss': 0.14852046400308608, 'AP50': 0.2779973888700514, 'n_gt': 406, 'n_pred': 1977}
+
+
+## Cell 8, output 16 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 8, 'train_loss': 0.13418162965774535, 'AP50': 0.26129704295587436, 'n_gt': 406, 'n_pred': 1726}
+
+
+## Cell 8, output 18 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 9, 'train_loss': 0.11651939757168293, 'AP50': 0.26671597679284714, 'n_gt': 406, 'n_pred': 1198}
+
+
+## Cell 8, output 20 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 10, 'train_loss': 0.1055657560378313, 'AP50': 0.25658968125660997, 'n_gt': 406, 'n_pred': 1228}
+
+
+## Cell 8, output 22 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 11, 'train_loss': 0.09456994447112084, 'AP50': 0.25577481815469216, 'n_gt': 406, 'n_pred': 815}
+
+
+## Cell 8, output 24 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 12, 'train_loss': 0.08739571225643158, 'AP50': 0.2848965033277513, 'n_gt': 406, 'n_pred': 815}
+
+
+## Cell 8, output 26 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 13, 'train_loss': 0.0791181231290102, 'AP50': 0.24033475284636593, 'n_gt': 406, 'n_pred': 626}
+
+
+## Cell 8, output 28 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 14, 'train_loss': 0.07160118640959263, 'AP50': 0.27371072965116616, 'n_gt': 406, 'n_pred': 575}
+
+
+## Cell 8, output 30 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 15, 'train_loss': 0.06613388229161501, 'AP50': 0.2854390913872905, 'n_gt': 406, 'n_pred': 505}
+
+
+## Cell 8, output 32 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 16, 'train_loss': 0.05613191914558411, 'AP50': 0.2804189152097679, 'n_gt': 406, 'n_pred': 556}
+
+
+## Cell 8, output 34 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 17, 'train_loss': 0.04669500481337309, 'AP50': 0.2816233553075658, 'n_gt': 406, 'n_pred': 479}
+
+
+## Cell 8, output 36 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 18, 'train_loss': 0.04120723429322243, 'AP50': 0.2796362975880626, 'n_gt': 406, 'n_pred': 476}
+
+
+## Cell 8, output 38 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 19, 'train_loss': 0.037911929700523615, 'AP50': 0.2840026291445317, 'n_gt': 406, 'n_pred': 469}
+
+
+## Cell 8, output 40 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 20, 'train_loss': 0.035318374920636414, 'AP50': 0.283274290823663, 'n_gt': 406, 'n_pred': 460}
+
+
+## Cell 8, output 42 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 21, 'train_loss': 0.03308072484657169, 'AP50': 0.25051293763270954, 'n_gt': 406, 'n_pred': 450}
+
+
+## Cell 8, output 44 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 22, 'train_loss': 0.031730830665677785, 'AP50': 0.28769640611368713, 'n_gt': 406, 'n_pred': 428}
+
+
+## Cell 8, output 46 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 23, 'train_loss': 0.03020491450279951, 'AP50': 0.2533624890622382, 'n_gt': 406, 'n_pred': 434}
+
+
+## Cell 8, output 48 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 24, 'train_loss': 0.02905538463592529, 'AP50': 0.25433018787720046, 'n_gt': 406, 'n_pred': 431}
+
+
+## Cell 8, output 50 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 25, 'train_loss': 0.028186121825128793, 'AP50': 0.2521371279169799, 'n_gt': 406, 'n_pred': 434}
+
+
+## Cell 8, output 52 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 26, 'train_loss': 0.02755275780335069, 'AP50': 0.2551522484371849, 'n_gt': 406, 'n_pred': 432}
+
+
+## Cell 8, output 54 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 27, 'train_loss': 0.02669934767857194, 'AP50': 0.25477274159690794, 'n_gt': 406, 'n_pred': 412}
+
+
+## Cell 8, output 56 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 28, 'train_loss': 0.02623208013549447, 'AP50': 0.2549382852321172, 'n_gt': 406, 'n_pred': 422}
+
+
+## Cell 8, output 58 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 29, 'train_loss': 0.02584240807965398, 'AP50': 0.2558511800699301, 'n_gt': 406, 'n_pred': 415}
+
+
+## Cell 8, output 60 (stream)
+
+frcnn_resnet50_fpn__original {'epoch': 30, 'train_loss': 0.02507010542601347, 'AP50': 0.25529051900250077, 'n_gt': 406, 'n_pred': 411}
+
+
+## Cell 8, output 62 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 1, 'train_loss': 0.3100709392428398, 'AP50': 0.18040664385853955, 'n_gt': 406, 'n_pred': 7646}
+
+
+## Cell 8, output 64 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 2, 'train_loss': 0.2870534892678261, 'AP50': 0.23103472302529937, 'n_gt': 406, 'n_pred': 8542}
+
+
+## Cell 8, output 66 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 3, 'train_loss': 0.26794052734971047, 'AP50': 0.2516731773989444, 'n_gt': 406, 'n_pred': 6089}
+
+
+## Cell 8, output 68 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 4, 'train_loss': 0.24443231633305548, 'AP50': 0.2909470683437324, 'n_gt': 406, 'n_pred': 4770}
+
+
+## Cell 8, output 70 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 5, 'train_loss': 0.2148090819120407, 'AP50': 0.2520068150091076, 'n_gt': 406, 'n_pred': 5162}
+
+
+## Cell 8, output 72 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 6, 'train_loss': 0.18551454892754554, 'AP50': 0.2775742035801445, 'n_gt': 406, 'n_pred': 3819}
+
+
+## Cell 8, output 74 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 7, 'train_loss': 0.1586790950447321, 'AP50': 0.25990069955388306, 'n_gt': 406, 'n_pred': 2518}
+
+
+## Cell 8, output 76 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 8, 'train_loss': 0.13998405022919178, 'AP50': 0.23613540213220316, 'n_gt': 406, 'n_pred': 1827}
+
+
+## Cell 8, output 78 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 9, 'train_loss': 0.12331384101510048, 'AP50': 0.2607037601833005, 'n_gt': 406, 'n_pred': 1411}
+
+
+## Cell 8, output 80 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 10, 'train_loss': 0.10848040643334389, 'AP50': 0.2708085856655967, 'n_gt': 406, 'n_pred': 1040}
+
+
+## Cell 8, output 82 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 11, 'train_loss': 0.09792324072122574, 'AP50': 0.2388711317008928, 'n_gt': 406, 'n_pred': 770}
+
+
+## Cell 8, output 84 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 12, 'train_loss': 0.08753787112236024, 'AP50': 0.2802541325891914, 'n_gt': 406, 'n_pred': 1054}
+
+
+## Cell 8, output 86 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 13, 'train_loss': 0.07967478946596385, 'AP50': 0.24556982306183733, 'n_gt': 406, 'n_pred': 892}
+
+
+## Cell 8, output 88 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 14, 'train_loss': 0.0753731942921877, 'AP50': 0.2486272930147895, 'n_gt': 406, 'n_pred': 700}
+
+
+## Cell 8, output 90 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 15, 'train_loss': 0.06911956415325403, 'AP50': 0.2601435097610128, 'n_gt': 406, 'n_pred': 650}
+
+
+## Cell 8, output 92 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 16, 'train_loss': 0.05712583638727665, 'AP50': 0.2699187070693282, 'n_gt': 406, 'n_pred': 565}
+
+
+## Cell 8, output 94 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 17, 'train_loss': 0.04740748871862888, 'AP50': 0.26929517937779984, 'n_gt': 406, 'n_pred': 501}
+
+
+## Cell 8, output 96 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 18, 'train_loss': 0.04219796701520681, 'AP50': 0.23734284145035597, 'n_gt': 406, 'n_pred': 478}
+
+
+## Cell 8, output 98 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 19, 'train_loss': 0.038561516299843786, 'AP50': 0.23431087791726044, 'n_gt': 406, 'n_pred': 447}
+
+
+## Cell 8, output 100 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 20, 'train_loss': 0.035872813142836094, 'AP50': 0.23211874338024796, 'n_gt': 406, 'n_pred': 456}
+
+
+## Cell 8, output 102 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 21, 'train_loss': 0.03410703797638416, 'AP50': 0.23383149060451888, 'n_gt': 406, 'n_pred': 440}
+
+
+## Cell 8, output 104 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 22, 'train_loss': 0.03258732971549034, 'AP50': 0.23316767929596913, 'n_gt': 406, 'n_pred': 439}
+
+
+## Cell 8, output 106 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 23, 'train_loss': 0.031392497055232525, 'AP50': 0.23330749954790875, 'n_gt': 406, 'n_pred': 439}
+
+
+## Cell 8, output 108 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 24, 'train_loss': 0.030246798411011695, 'AP50': 0.23503362096599362, 'n_gt': 406, 'n_pred': 424}
+
+
+## Cell 8, output 110 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 25, 'train_loss': 0.02931672127172351, 'AP50': 0.23404812485067292, 'n_gt': 406, 'n_pred': 431}
+
+
+## Cell 8, output 112 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 26, 'train_loss': 0.028585573211312294, 'AP50': 0.23580657207266567, 'n_gt': 406, 'n_pred': 436}
+
+
+## Cell 8, output 114 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 27, 'train_loss': 0.028097180884331465, 'AP50': 0.2355446875541224, 'n_gt': 406, 'n_pred': 419}
+
+
+## Cell 8, output 116 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 28, 'train_loss': 0.02730818900465965, 'AP50': 0.23534718028764903, 'n_gt': 406, 'n_pred': 424}
+
+
+## Cell 8, output 118 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 29, 'train_loss': 0.0267856123521924, 'AP50': 0.23630570979408186, 'n_gt': 406, 'n_pred': 426}
+
+
+## Cell 8, output 120 (stream)
+
+frcnn_resnet50_fpn__clahe_gamma {'epoch': 30, 'train_loss': 0.026173180140554905, 'AP50': 0.23481221908034494, 'n_gt': 406, 'n_pred': 417}
+
+
+## Cell 8, output 122 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 1, 'train_loss': 0.30482207041978837, 'AP50': 0.10120879272986995, 'n_gt': 406, 'n_pred': 9116}
+
+
+## Cell 8, output 124 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 2, 'train_loss': 0.2749090930223465, 'AP50': 0.2290161731619686, 'n_gt': 406, 'n_pred': 6570}
+
+
+## Cell 8, output 126 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 3, 'train_loss': 0.24412218707799913, 'AP50': 0.26850816525486976, 'n_gt': 406, 'n_pred': 4959}
+
+
+## Cell 8, output 128 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 4, 'train_loss': 0.21022519281506538, 'AP50': 0.23892786670106123, 'n_gt': 406, 'n_pred': 3227}
+
+
+## Cell 8, output 130 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 5, 'train_loss': 0.17200293344259263, 'AP50': 0.2172453326799756, 'n_gt': 406, 'n_pred': 2281}
+
+
+## Cell 8, output 132 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 6, 'train_loss': 0.14689929562807083, 'AP50': 0.23485463403921114, 'n_gt': 406, 'n_pred': 1813}
+
+
+## Cell 8, output 134 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 7, 'train_loss': 0.12326482996344566, 'AP50': 0.22425603029480293, 'n_gt': 406, 'n_pred': 1089}
+
+
+## Cell 8, output 136 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 8, 'train_loss': 0.09975409837067127, 'AP50': 0.24951938510094382, 'n_gt': 406, 'n_pred': 978}
+
+
+## Cell 8, output 138 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 9, 'train_loss': 0.08045828019827604, 'AP50': 0.19845360669481274, 'n_gt': 406, 'n_pred': 678}
+
+
+## Cell 8, output 140 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 10, 'train_loss': 0.06988499373942614, 'AP50': 0.24223796431332165, 'n_gt': 406, 'n_pred': 694}
+
+
+## Cell 8, output 142 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 11, 'train_loss': 0.059007889740169045, 'AP50': 0.2179160252725519, 'n_gt': 406, 'n_pred': 481}
+
+
+## Cell 8, output 144 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 12, 'train_loss': 0.05203853128105402, 'AP50': 0.21639622871194805, 'n_gt': 406, 'n_pred': 449}
+
+
+## Cell 8, output 146 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 13, 'train_loss': 0.04698073634505272, 'AP50': 0.2141785802776515, 'n_gt': 406, 'n_pred': 519}
+
+
+## Cell 8, output 148 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 14, 'train_loss': 0.04265237392485142, 'AP50': 0.25742864918423514, 'n_gt': 406, 'n_pred': 542}
+
+
+## Cell 8, output 150 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 15, 'train_loss': 0.04022369410470128, 'AP50': 0.2162684292968022, 'n_gt': 406, 'n_pred': 404}
+
+
+## Cell 8, output 152 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 16, 'train_loss': 0.034662640154361726, 'AP50': 0.22951932516785878, 'n_gt': 406, 'n_pred': 388}
+
+
+## Cell 8, output 154 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 17, 'train_loss': 0.030304547928273678, 'AP50': 0.22294621911386955, 'n_gt': 406, 'n_pred': 396}
+
+
+## Cell 8, output 156 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 18, 'train_loss': 0.02697694882750511, 'AP50': 0.20683471914276144, 'n_gt': 406, 'n_pred': 383}
+
+
+## Cell 8, output 158 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 19, 'train_loss': 0.025099025808274746, 'AP50': 0.20540290376960557, 'n_gt': 406, 'n_pred': 403}
+
+
+## Cell 8, output 160 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 20, 'train_loss': 0.02344673043489456, 'AP50': 0.22388731399234227, 'n_gt': 406, 'n_pred': 388}
+
+
+## Cell 8, output 162 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 21, 'train_loss': 0.02233980946056545, 'AP50': 0.21564197316591296, 'n_gt': 406, 'n_pred': 375}
+
+
+## Cell 8, output 164 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 22, 'train_loss': 0.021213820207864047, 'AP50': 0.21696755398016865, 'n_gt': 406, 'n_pred': 375}
+
+
+## Cell 8, output 166 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 23, 'train_loss': 0.020745726373046638, 'AP50': 0.22225032098287015, 'n_gt': 406, 'n_pred': 355}
+
+
+## Cell 8, output 168 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 24, 'train_loss': 0.020045148741453887, 'AP50': 0.21316871114832478, 'n_gt': 406, 'n_pred': 378}
+
+
+## Cell 8, output 170 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 25, 'train_loss': 0.019274079602211714, 'AP50': 0.22178017600552813, 'n_gt': 406, 'n_pred': 372}
+
+
+## Cell 8, output 172 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 26, 'train_loss': 0.018719765972346068, 'AP50': 0.21520406604554979, 'n_gt': 406, 'n_pred': 345}
+
+
+## Cell 8, output 174 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 27, 'train_loss': 0.018567059023305774, 'AP50': 0.2173073354849488, 'n_gt': 406, 'n_pred': 371}
+
+
+## Cell 8, output 176 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 28, 'train_loss': 0.018156955599784853, 'AP50': 0.21237418911837516, 'n_gt': 406, 'n_pred': 359}
+
+
+## Cell 8, output 178 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 29, 'train_loss': 0.017914278866723178, 'AP50': 0.212820606097917, 'n_gt': 406, 'n_pred': 337}
+
+
+## Cell 8, output 180 (stream)
+
+frcnn_resnet50_fpn_v2__clahe_gamma {'epoch': 30, 'train_loss': 0.01744667062163353, 'AP50': 0.21653669973550657, 'n_gt': 406, 'n_pred': 361}
+                                  exp  best_AP50  \
+0        frcnn_resnet50_fpn__original   0.295686
+1     frcnn_resnet50_fpn__clahe_gamma   0.290947
+2  frcnn_resnet50_fpn_v2__clahe_gamma   0.268508
+
+                                           best_ckpt
+0  <PROJECT_ROOT>/tv_backbone_exps/f...
+1  <PROJECT_ROOT>/tv_backbone_exps/f...
+2  <PROJECT_ROOT>/tv_backbone_exps/f...
+
+
+## Cell 9, output 1 (stream)
+
+                                      exp  best_AP50               backbone        pipe  epoch     AP50                                                                                    dir
+             frcnn_resnet50_fpn__original   0.295686           resnet50_fpn    original      3 0.295686              <PROJECT_ROOT>/tv_backbone_exps/frcnn_resnet50_fpn__original
+          frcnn_resnet50_fpn__clahe_gamma   0.290947           resnet50_fpn clahe_gamma      4 0.290947           <PROJECT_ROOT>/tv_backbone_exps/frcnn_resnet50_fpn__clahe_gamma
+       frcnn_resnet50_fpn_v2__clahe_gamma   0.268508        resnet50_fpn_v2 clahe_gamma      3 0.268508        <PROJECT_ROOT>/tv_backbone_exps/frcnn_resnet50_fpn_v2__clahe_gamma
+frcnn_mobilenet_v3_large_fpn__clahe_gamma   0.185888 mobilenet_v3_large_fpn clahe_gamma      5 0.185888 <PROJECT_ROOT>/tv_backbone_exps/frcnn_mobilenet_v3_large_fpn__clahe_gamma
+
+
+## Cell 9, output 2 (execute_result)
+
+                                         exp  best_AP50  \
+2               frcnn_resnet50_fpn__original   0.295686
+1            frcnn_resnet50_fpn__clahe_gamma   0.290947
+3         frcnn_resnet50_fpn_v2__clahe_gamma   0.268508
+0  frcnn_mobilenet_v3_large_fpn__clahe_gamma   0.185888
+
+                 backbone         pipe  epoch      AP50  \
+2            resnet50_fpn     original      3  0.295686
+1            resnet50_fpn  clahe_gamma      4  0.290947
+3         resnet50_fpn_v2  clahe_gamma      3  0.268508
+0  mobilenet_v3_large_fpn  clahe_gamma      5  0.185888
+
+                                                 dir
+2  <PROJECT_ROOT>/tv_backbone_exps/f...
+1  <PROJECT_ROOT>/tv_backbone_exps/f...
+3  <PROJECT_ROOT>/tv_backbone_exps/f...
+0  <PROJECT_ROOT>/tv_backbone_exps/f...
+
+## Cell 11, output 1 (stream)
+
+Ultralytics 8.4.110 🚀 Python-3.12.6 torch-2.13.0+cu130 CUDA:0 (NVIDIA GeForce RTX 5090, 32111MiB)
+50 epochs completed in 0.035 hours.
+Validating <PROJECT_ROOT>/runs/detect/yolo11n__clahe_gamma/weights/best.pt...
+                   all        200        406      0.346      0.404      0.296      0.122
+Ultralytics 8.4.110 🚀 Python-3.12.6 torch-2.13.0+cu130 CUDA:0 (NVIDIA GeForce RTX 5090, 32111MiB)
+Results saved to <PROJECT_ROOT>/runs/detect/yolo11n__clahe_gamma
+Ultralytics 8.4.110 🚀 Python-3.12.6 torch-2.13.0+cu130 CUDA:0 (NVIDIA GeForce RTX 5090, 32111MiB)
+50 epochs completed in 0.044 hours.
+Validating <PROJECT_ROOT>/runs/detect/yolo11s__clahe_gamma/weights/best.pt...
+                   all        200        406      0.356      0.401       0.31      0.121
+Ultralytics 8.4.110 🚀 Python-3.12.6 torch-2.13.0+cu130 CUDA:0 (NVIDIA GeForce RTX 5090, 32111MiB)
+Results saved to <PROJECT_ROOT>/runs/detect/yolo11s__clahe_gamma

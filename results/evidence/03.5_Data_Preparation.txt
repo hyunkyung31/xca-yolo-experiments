@@ -1,0 +1,30 @@
+Historical saved outputs; not rerun during portfolio organization.
+Cell numbers are 1-based positions in the original notebook.
+Personal paths redacted; raw output objects preserved outside repository.
+
+## Cell 6, output 2 (stream)
+
+original train: 1000
+original val  : 200
+
+
+## Cell 8, output 1 (stream)
+
+[train.json]
+  images=1000, stenosis_boxes=1625, empty_labels=3
+[val.json]
+  images=200, stenosis_boxes=406, empty_labels=0
+라벨 변환/복사 완료
+
+
+## Cell 10, output 1 (stream)
+
+pipe                       img_tr  lbl_tr  img_va  lbl_va  ok?
+----------------------------------------------------------------------
+clahe                        1000    1000       0     200  CHECK
+gamma                        1000    1000       0     200  CHECK
+frangi                       1000    1000       0     200  CHECK
+clahe_gamma                  1000    1000       0     200  CHECK
+clahe_gamma_frangi           1000    1000       0     200  CHECK
+gamma_clahe_frangi           1000    1000       0     200  CHECK
+original                     1000    1000     200     200  OK

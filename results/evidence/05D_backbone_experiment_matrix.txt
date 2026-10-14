@@ -1,0 +1,20 @@
+Historical saved outputs; not rerun during portfolio organization.
+Cell numbers are 1-based positions in the original notebook.
+Personal paths redacted; raw output objects preserved outside repository.
+
+## Cell 4, output 1 (error)
+
+NameError: name 'random' is not defined
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[1], line 9
+      5 NUM_WORKERS = 0  # Jupyter 안정
+      6 PRINT_EVERY = 50
+      7 SEED = 42
+      8
+----> 9 random.seed(SEED)
+     10 torch.manual_seed(SEED)
+     11
+     12 # 권장 순서 매트릭스 — 위에서부터 돌리기
+
+NameError: name 'random' is not defined
