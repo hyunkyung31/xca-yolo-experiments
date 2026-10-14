@@ -1,0 +1,23 @@
+# Imports found in the original 11 notebooks and 3 Python scripts.
+# Exact versions are intentionally unpinned where a complete verified environment
+# is unavailable. This is a dependency inventory, not a reproducibility lockfile.
+# See docs/reproducibility.md for versions observed in saved historical outputs.
+numpy
+pandas
+matplotlib
+opencv-python
+Pillow
+scikit-image
+seaborn
+tqdm
+PyYAML
+# Choose a matching torch/torchvision CPU or CUDA build from the official source.
+# Saved logs: torch 2.13.0+cu130; torchvision version unknown. Installability unverified.
+torch
+torchvision
+# Saved logs: ultralytics 8.4.110; current availability not verified.
+ultralytics
+# Notebook editing/validation tools; historical versions unknown.
+jupyterlab
+ipykernel
+nbformat

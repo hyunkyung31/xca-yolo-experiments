@@ -1,0 +1,110 @@
+Historical saved outputs; not rerun during portfolio organization.
+Cell numbers are 1-based positions in the original notebook.
+Personal paths redacted; raw output objects preserved outside repository.
+
+## Cell 4, output 1 (stream)
+
+cwd           : <PROJECT_ROOT>/notebooks
+PROJECT_DIR   : <PROJECT_ROOT>
+DATA_DIR      : <PROJECT_ROOT>/data
+PREPROCESS_DIR: <PROJECT_ROOT>/data/preprocessed
+<PROJECT_ROOT>/data/arcade/arcade/stenosis/train/annotations/train.json
+TRAIN_JSON exists: True
+RAW_DIR exists   : True
+PREPROCESS exists: True
+
+
+## Cell 5, output 1 (stream)
+
+Images      : 1000
+Annotations : 1625
+
+
+## Cell 6, output 1 (stream)
+
+평균 width : 63.7
+평균 height: 66.9
+평균 area  : 4836.9
+
+
+
+
+## Cell 9, output 1 (stream)
+
+<PROJECT_ROOT>/data/preprocessed/01_clahe/train exists: True
+<PROJECT_ROOT>/data/preprocessed/01_clahe/val exists: True
+<PROJECT_ROOT>/data/preprocessed/02_gamma/train exists: True
+<PROJECT_ROOT>/data/preprocessed/02_gamma/val exists: True
+<PROJECT_ROOT>/data/preprocessed/03_frangi/train exists: True
+<PROJECT_ROOT>/data/preprocessed/03_frangi/val exists: True
+<PROJECT_ROOT>/data/preprocessed/04_clahe_gamma/train exists: True
+<PROJECT_ROOT>/data/preprocessed/04_clahe_gamma/val exists: True
+<PROJECT_ROOT>/data/preprocessed/05_clahe_gamma_frangi/train exists: True
+<PROJECT_ROOT>/data/preprocessed/05_clahe_gamma_frangi/val exists: True
+<PROJECT_ROOT>/data/preprocessed/06_gamma_clahe_frangi/train exists: True
+<PROJECT_ROOT>/data/preprocessed/06_gamma_clahe_frangi/val exists: True
+<PROJECT_ROOT>/data/preprocessed/07_black_hat/train exists: True
+<PROJECT_ROOT>/data/preprocessed/07_black_hat/val exists: True
+folder check done
+
+
+## Cell 10, output 1 (stream)
+
+1000
+
+
+## Cell 10, output 2 (execute_result)
+
+(np.float64(-0.5), np.float64(511.5), np.float64(511.5), np.float64(-0.5))
+
+## Cell 14, output 1 (stream)
+
+float32
+0.0 8.517388e-05
+
+
+## Cell 15, output 1 (stream)
+
+0.26.0
+
+
+## Cell 40, output 1 (stream)
+
+clip_limit : 2.0
+tile_grid  : (4, 4)
+gamma      : 0.8
+frangi     : [1, 2, 3, 4]
+unsharp    : 2.0 1.5
+kernel     : 15
+
+
+## Cell 43, output 1 (stream)
+
+Train images : 1000
+Val images   : 200
+Root         : <PROJECT_ROOT>/data/preprocessed
+ - <PROJECT_ROOT>/data/preprocessed/01_clahe/train
+ - <PROJECT_ROOT>/data/preprocessed/01_clahe/val
+ - <PROJECT_ROOT>/data/preprocessed/02_gamma/train
+ - <PROJECT_ROOT>/data/preprocessed/02_gamma/val
+ - <PROJECT_ROOT>/data/preprocessed/03_frangi/train
+ - <PROJECT_ROOT>/data/preprocessed/03_frangi/val
+ - <PROJECT_ROOT>/data/preprocessed/04_clahe_gamma/train
+ - <PROJECT_ROOT>/data/preprocessed/04_clahe_gamma/val
+ - <PROJECT_ROOT>/data/preprocessed/05_clahe_gamma_frangi/train
+ - <PROJECT_ROOT>/data/preprocessed/05_clahe_gamma_frangi/val
+ - <PROJECT_ROOT>/data/preprocessed/06_gamma_clahe_frangi/train
+ - <PROJECT_ROOT>/data/preprocessed/06_gamma_clahe_frangi/val
+ - <PROJECT_ROOT>/data/preprocessed/07_black_hat/train
+ - <PROJECT_ROOT>/data/preprocessed/07_black_hat/val
+
+
+## Cell 45, output 1 (stream)
+
+01_clahe: train=1000, val=200
+02_gamma: train=1000, val=200
+03_frangi: train=1000, val=200
+04_clahe_gamma: train=1000, val=200
+05_clahe_gamma_frangi: train=1000, val=200
+06_gamma_clahe_frangi: train=1000, val=200
+07_black_hat: train=1000, val=200

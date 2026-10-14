@@ -1,0 +1,49 @@
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>pipeline</th>
+      <th>role</th>
+      <th>quant_summary</th>
+      <th>expected_effect</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>original</td>
+      <td>대조군 (Baseline)</td>
+      <td>원본 데이터</td>
+      <td>기본 탐지 성능 기준점</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>clahe</td>
+      <td>실험군 1 (1위)</td>
+      <td>ROI 대비 +90%, 윤곽선 밀도 +223%</td>
+      <td>협착 경계선 검출력 극대화</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>clahe_gamma</td>
+      <td>실험군 2 (2위)</td>
+      <td>ROI 대비 +80%, 윤곽선 밀도 +201%</td>
+      <td>대비 향상 + 밝기 균일화 효과 검증</td>
+    </tr>
+  </tbody>
+</table>
+</div>

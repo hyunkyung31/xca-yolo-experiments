@@ -1,0 +1,6 @@
+,model,family,pipeline,exp,metric_AP50
+3,yolo11n,YOLO,clahe_gamma,yolo11n_clahe_gamma,0.345780
+4,yolo11s,YOLO,clahe_gamma,yolo11s__clahe_gamma,0.309730
+1,resnet50_fpn,FRCNN,original,frcnn_resnet50_fpn__original,0.295686
+2,resnet50_fpn_v2,FRCNN,clahe_gamma,frcnn_resnet50_fpn_v2__clahe_gamma,0.268508
+0,mobilenet_v3_large_fpn,FRCNN,clahe_gamma,frcnn_mobilenet_v3_large_fpn__clahe_gamma,0.185888

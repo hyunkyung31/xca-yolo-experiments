@@ -1,0 +1,3 @@
+Historical saved outputs; not rerun during portfolio organization.
+Cell numbers are 1-based positions in the original notebook.
+Personal paths redacted; raw output objects preserved outside repository.

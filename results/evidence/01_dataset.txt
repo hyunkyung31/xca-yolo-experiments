@@ -1,0 +1,180 @@
+Historical saved outputs; not rerun during portfolio organization.
+Cell numbers are 1-based positions in the original notebook.
+Personal paths redacted; raw output objects preserved outside repository.
+
+## Cell 1, output 1 (stream)
+
+<PROJECT_ROOT>
+<PROJECT_ROOT>/data
+
+
+## Cell 4, output 1 (stream)
+
+<PROJECT_ROOT>/data/arcade.zip
+<PROJECT_ROOT>/data/arcade
+
+
+## Cell 6, output 1 (stream)
+
+이미 압축이 풀려있습니다.
+
+
+## Cell 7, output 1 (stream)
+
+arcade/
+    arcade/
+        stenosis/
+        syntax/
+
+
+## Cell 8, output 1 (stream)
+
+총 이미지 : 3000
+
+
+## Cell 9, output 1 (stream)
+
+총 Label : 0
+
+
+## Cell 10, output 1 (stream)
+
+test
+train
+val
+
+
+## Cell 11, output 1 (stream)
+
+test
+train
+val
+
+
+## Cell 14, output 1 (stream)
+
+dict_keys(['images', 'annotations', 'categories'])
+
+
+## Cell 15, output 1 (stream)
+
+1000
+
+
+## Cell 16, output 1 (stream)
+
+1625
+
+
+## Cell 17, output 1 (execute_result)
+
+[{'id': 1, 'name': '1', 'supercategory': ''},
+ {'id': 2, 'name': '2', 'supercategory': ''},
+ {'id': 3, 'name': '3', 'supercategory': ''},
+ {'id': 4, 'name': '4', 'supercategory': ''},
+ {'id': 5, 'name': '5', 'supercategory': ''},
+ {'id': 6, 'name': '6', 'supercategory': ''},
+ {'id': 7, 'name': '7', 'supercategory': ''},
+ {'id': 8, 'name': '8', 'supercategory': ''},
+ {'id': 9, 'name': '9', 'supercategory': ''},
+ {'id': 10, 'name': '9a', 'supercategory': ''},
+ {'id': 11, 'name': '10', 'supercategory': ''},
+ {'id': 12, 'name': '10a', 'supercategory': ''},
+ {'id': 13, 'name': '11', 'supercategory': ''},
+ {'id': 14, 'name': '12', 'supercategory': ''},
+ {'id': 15, 'name': '12a', 'supercategory': ''},
+ {'id': 16, 'name': '13', 'supercategory': ''},
+ {'id': 17, 'name': '14', 'supercategory': ''},
+ {'id': 18, 'name': '14a', 'supercategory': ''},
+ {'id': 19, 'name': '15', 'supercategory': ''},
+ {'id': 20, 'name': '16', 'supercategory': ''},
+ {'id': 21, 'name': '16a', 'supercategory': ''},
+ {'id': 22, 'name': '16b', 'supercategory': ''},
+ {'id': 23, 'name': '16c', 'supercategory': ''},
+ {'id': 24, 'name': '12b', 'supercategory': ''},
+ {'id': 25, 'name': '14b', 'supercategory': ''},
+ {'id': 26, 'name': 'stenosis', 'supercategory': ''}]
+
+## Cell 18, output 1 (execute_result)
+
+[{'id': 1, 'name': '1', 'supercategory': ''},
+ {'id': 2, 'name': '2', 'supercategory': ''},
+ {'id': 3, 'name': '3', 'supercategory': ''},
+ {'id': 4, 'name': '4', 'supercategory': ''},
+ {'id': 5, 'name': '5', 'supercategory': ''},
+ {'id': 6, 'name': '6', 'supercategory': ''},
+ {'id': 7, 'name': '7', 'supercategory': ''},
+ {'id': 8, 'name': '8', 'supercategory': ''},
+ {'id': 9, 'name': '9', 'supercategory': ''},
+ {'id': 10, 'name': '9a', 'supercategory': ''},
+ {'id': 11, 'name': '10', 'supercategory': ''},
+ {'id': 12, 'name': '10a', 'supercategory': ''},
+ {'id': 13, 'name': '11', 'supercategory': ''},
+ {'id': 14, 'name': '12', 'supercategory': ''},
+ {'id': 15, 'name': '12a', 'supercategory': ''},
+ {'id': 16, 'name': '13', 'supercategory': ''},
+ {'id': 17, 'name': '14', 'supercategory': ''},
+ {'id': 18, 'name': '14a', 'supercategory': ''},
+ {'id': 19, 'name': '15', 'supercategory': ''},
+ {'id': 20, 'name': '16', 'supercategory': ''},
+ {'id': 21, 'name': '16a', 'supercategory': ''},
+ {'id': 22, 'name': '16b', 'supercategory': ''},
+ {'id': 23, 'name': '16c', 'supercategory': ''},
+ {'id': 24, 'name': '12b', 'supercategory': ''},
+ {'id': 25, 'name': '14b', 'supercategory': ''},
+ {'id': 26, 'name': 'stenosis', 'supercategory': ''}]
+
+## Cell 19, output 1 (stream)
+
+dict_keys(['images', 'annotations', 'categories'])
+1000
+1625
+[{'id': 1, 'name': '1', 'supercategory': ''}, {'id': 2, 'name': '2', 'supercategory': ''}, {'id': 3, 'name': '3', 'supercategory': ''}, {'id': 4, 'name': '4', 'supercategory': ''}, {'id': 5, 'name': '5', 'supercategory': ''}, {'id': 6, 'name': '6', 'supercategory': ''}, {'id': 7, 'name': '7', 'supercategory': ''}, {'id': 8, 'name': '8', 'supercategory': ''}, {'id': 9, 'name': '9', 'supercategory': ''}, {'id': 10, 'name': '9a', 'supercategory': ''}, {'id': 11, 'name': '10', 'supercategory': ''}, {'id': 12, 'name': '10a', 'supercategory': ''}, {'id': 13, 'name': '11', 'supercategory': ''}, {'id': 14, 'name': '12', 'supercategory': ''}, {'id': 15, 'name': '12a', 'supercategory': ''}, {'id': 16, 'name': '13', 'supercategory': ''}, {'id': 17, 'name': '14', 'supercategory': ''}, {'id': 18, 'name': '14a', 'supercategory': ''}, {'id': 19, 'name': '15', 'supercategory': ''}, {'id': 20, 'name': '16', 'supercategory': ''}, {'id': 21, 'name': '16a', 'supercategory': ''}, {'id': 22, 'name': '16b', 'supercategory': ''}, {'id': 23, 'name': '16c', 'supercategory': ''}, {'id': 24, 'name': '12b', 'supercategory': ''}, {'id': 25, 'name': '14b', 'supercategory': ''}, {'id': 26, 'name': 'stenosis', 'supercategory': ''}]
+
+
+## Cell 21, output 1 (execute_result)
+
+Counter({26: 1625})
+
+## Cell 22, output 1 (stream)
+
+stenosis 1625
+
+
+## Cell 25, output 1 (stream)
+
+Min    : 152.7
+Max    : 60087.2
+Mean   : 4836.9
+Median : 2782.6
+
+
+## Cell 25, output 2 (execute_result)
+
+count     1625.000000
+mean      4836.932091
+std       5899.819810
+min        152.698200
+25%       1445.989300
+50%       2782.640000
+75%       5589.000000
+max      60087.165600
+dtype: float64
+
+## Cell 29, output 1 (execute_result)
+
+[865, 617, 826, 169, 599]
+
+## Cell 31, output 1 (stream)
+
+==================================================
+ARCADE DATASET SUMMARY
+==================================================
+Train Images      : 1000
+Annotations       : 1625
+Classes           : 1
+Detection Target  : stenosis
+Mean BBox Area    : 4836.93
+Median BBox Area  : 2782.64
+Max BBox Area     : 60087.17
+Min BBox Area     : 152.70

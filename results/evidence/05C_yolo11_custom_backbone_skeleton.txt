@@ -1,0 +1,75 @@
+Historical saved outputs; not rerun during portfolio organization.
+Cell numbers are 1-based positions in the original notebook.
+Personal paths redacted; raw output objects preserved outside repository.
+
+## Cell 2, output 1 (stream)
+
+<PROJECT_ROOT>/custom_yolo11
+
+
+## Cell 3, output 1 (stream)
+
+convnext_t_stub -> [(1, 384, 40, 40), (1, 768, 20, 20), (1, 768, 20, 20)]
+swin_t_stub -> [(1, 384, 40, 40), (1, 768, 20, 20), (1, 768, 20, 20)]
+vit_stub -> [(1, 384, 40, 40), (1, 384, 20, 20), (1, 384, 10, 10)]
+
+
+## Cell 4, output 1 (stream)
+
+wrote <PROJECT_ROOT>/custom_yolo11/backbones.py
+
+
+## Cell 5, output 1 (stream)
+
+YOLO loaded: <class 'ultralytics.nn.tasks.DetectionModel'>
+0 Conv
+1 Conv
+2 C3k2
+3 Conv
+4 C3k2
+5 Conv
+6 C3k2
+7 Conv
+Integration checklist:
+1) backbone outs channels == neck in channels
+2) strides ~ 8/16/32
+3) num_classes = 1 (stenosis)
+4) freeze backbone first
+
+
+## Cell 6, output 1 (stream)
+
+toy outputs: [(2, 6, 40, 40), (2, 6, 20, 20), (2, 6, 20, 20)]
+
+
+## Cell 8, output 1 (stream)
+
+Ultralytics 8.4.110 🚀 Python-3.12.6 torch-2.13.0+cu130 CUDA:0 (NVIDIA GeForce RTX 5090, 32111MiB)
+50 epochs completed in 0.065 hours.
+Validating <PROJECT_ROOT>/runs/detect/yolo11n_Ctrack_clahe_gamma/weights/best.pt...
+                   all        200        406      0.346      0.404      0.296      0.122
+Ultralytics 8.4.110 🚀 Python-3.12.6 torch-2.13.0+cu130 CUDA:0 (NVIDIA GeForce RTX 5090, 32111MiB)
+Results saved to <PROJECT_ROOT>/runs/detect/yolo11n_Ctrack_clahe_gamma
+saved to: <PROJECT_ROOT>/runs/detect/yolo11n_Ctrack_clahe_gamma
+
+
+## Cell 9, output 1 (stream)
+
+epoch 1: loss=4.5122
+epoch 2: loss=2.0322
+epoch 3: loss=1.2110
+toy checkpoint saved: <PROJECT_ROOT>/custom_yolo11/stub_swin_t_stub.pt
+NOTE: this does NOT train real stenosis detection. Use YOLO cell above for real training.
+
+
+## Cell 10, output 1 (stream)
+
+Real YOLO11 backbone replacement needs:
+- register custom module in ultralytics parse_model
+- match neck in-channels to backbone out-channels
+- keep strides near 8/16/32
+- then train with model.train(data=...)
+
+Until then:
+- use B notebook (MMDet Swin/ConvNeXt) for backbone comparison
+- use YOLO train cell above for pipeline baseline

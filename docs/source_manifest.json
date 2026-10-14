@@ -1,0 +1,157 @@
+{
+  "archive_filename": "yolo.zip",
+  "archive_sha256": "6ecb0af2071de9ee5852891ade8ce4d1b21fa3f25b07550274c3924d0fa11f50",
+  "original_files": [
+    {
+      "original_path": "yolo/01_dataset.ipynb",
+      "organized_path": "notebooks/01_dataset.ipynb",
+      "original_sha256": "26a115a9643438f200296c5b063218a59cbdb6c331259b1271fa5dedb0c9c101",
+      "organized_sha256": "84f3132bebc2b7f6d6bf261c107cf88616e85a6f17f88b068b1821d6e0ce673f",
+      "cells": 32,
+      "code_cells": 27,
+      "saved_executed_code_cells": 26,
+      "original_outputs": 28,
+      "organized_outputs": 21,
+      "original_image_outputs": 6
+    },
+    {
+      "original_path": "yolo/02_preprocessing.ipynb",
+      "organized_path": "notebooks/02_preprocessing.ipynb",
+      "original_sha256": "c43dec7024b3492b959e48a650ad35bb0f3b5d5eff41fda4d8534d6c64d70193",
+      "organized_sha256": "b1c82217c04f1f8a04052192147a76b68904ed908b0a83da019c203b78e34ed6",
+      "cells": 45,
+      "code_cells": 32,
+      "saved_executed_code_cells": 32,
+      "original_outputs": 26,
+      "organized_outputs": 11,
+      "original_image_outputs": 12
+    },
+    {
+      "original_path": "yolo/03.5_Data Preparation.ipynb",
+      "organized_path": "notebooks/03.5_Data Preparation.ipynb",
+      "original_sha256": "0b06cdfc923717632d57d018723c5cf6ea78b75c66bb831a21526920590326e7",
+      "organized_sha256": "90f8ac3fd195a3b4b32b7a2e00044c4d3df04dde3c70ba7700a66d5ff99744da",
+      "cells": 11,
+      "code_cells": 6,
+      "saved_executed_code_cells": 3,
+      "original_outputs": 5,
+      "organized_outputs": 3,
+      "original_image_outputs": 0
+    },
+    {
+      "original_path": "yolo/03.6_coco_to_yolo_seg.ipynb",
+      "organized_path": "notebooks/03.6_coco_to_yolo_seg.ipynb",
+      "original_sha256": "b08c5b8cdafec71eb917b706c89da60d45c58dfa805800241ee9690315b1096e",
+      "organized_sha256": "ea0a834140964068384d6d037a6f6ee689a8210b569b950638317db1c68672aa",
+      "cells": 13,
+      "code_cells": 6,
+      "saved_executed_code_cells": 0,
+      "original_outputs": 0,
+      "organized_outputs": 0,
+      "original_image_outputs": 0
+    },
+    {
+      "original_path": "yolo/03_quality_metrics.ipynb",
+      "organized_path": "notebooks/03_quality_metrics.ipynb",
+      "original_sha256": "c9b79bdda71b5d1a509f5a62810164dc63755c4b3c47e7e68b111e26c255a220",
+      "organized_sha256": "1b09cebfa0d95fdc9a95bfbb3939f9e4e6f4eadc2bd5c0cf7f16d850a0e778a8",
+      "cells": 10,
+      "code_cells": 9,
+      "saved_executed_code_cells": 7,
+      "original_outputs": 8,
+      "organized_outputs": 6,
+      "original_image_outputs": 1
+    },
+    {
+      "original_path": "yolo/04_train_yolo(cursor).ipynb.ipynb",
+      "organized_path": "notebooks/04_train_yolo(cursor).ipynb.ipynb",
+      "original_sha256": "7074ab51341d1cc83891e1900bf86ec5374f1f0270515010b93e46a3819d423f",
+      "organized_sha256": "bdf5dcebedfe50e1f44bbb9371b3d9dae13dbc846eeffe1ef0216a049b03984a",
+      "cells": 8,
+      "code_cells": 7,
+      "saved_executed_code_cells": 7,
+      "original_outputs": 7,
+      "organized_outputs": 7,
+      "original_image_outputs": 0
+    },
+    {
+      "original_path": "yolo/05A_yolo11_result_aggregation.ipynb",
+      "organized_path": "notebooks/05A_yolo11_result_aggregation.ipynb",
+      "original_sha256": "f08c751ec5432c2076c0ae8631fd999deebab09db8db193b636e33b7daa6db1a",
+      "organized_sha256": "3bf649a506da11db34f31682a14cdafa0be7f1d18073ca084c6f74d901c1c5d0",
+      "cells": 8,
+      "code_cells": 7,
+      "saved_executed_code_cells": 6,
+      "original_outputs": 7,
+      "organized_outputs": 7,
+      "original_image_outputs": 1
+    },
+    {
+      "original_path": "yolo/05B_mmdet_swin_convnext.ipynb",
+      "organized_path": "notebooks/05B_mmdet_swin_convnext.ipynb",
+      "original_sha256": "a52a1c6cfa6fadc0d9cf16a03c77c5f27ea9cd54a85b319b2361428b76ab80e7",
+      "organized_sha256": "3abb50d5eac4d437815bc30e5d078fbfa5a1424b2ed10a26707550a2460a4bfb",
+      "cells": 12,
+      "code_cells": 9,
+      "saved_executed_code_cells": 9,
+      "original_outputs": 388,
+      "organized_outputs": 198,
+      "original_image_outputs": 0
+    },
+    {
+      "original_path": "yolo/05C_yolo11_custom_backbone_skeleton.ipynb",
+      "organized_path": "notebooks/05C_yolo11_custom_backbone_skeleton.ipynb",
+      "original_sha256": "d920327eb20fb943440f3909917f02e6542509551d1b2a0efd7a2c0d05e6bdfc",
+      "organized_sha256": "95f8f424214c4fbb10a3278b9a09bee8340e0e4c9010a078fee0c635159921df",
+      "cells": 11,
+      "code_cells": 8,
+      "saved_executed_code_cells": 8,
+      "original_outputs": 8,
+      "organized_outputs": 8,
+      "original_image_outputs": 0
+    },
+    {
+      "original_path": "yolo/05D_backbone_experiment_matrix.ipynb",
+      "organized_path": "notebooks/05D_backbone_experiment_matrix.ipynb",
+      "original_sha256": "91ad1a528b4a76d814c250833e6e5017649b7ec1f3f4befa11409566642c2d83",
+      "organized_sha256": "37e74bf009497265668cd0a90463f60ca53aadec73f53d92b6dd1e33f48c0e7d",
+      "cells": 13,
+      "code_cells": 8,
+      "saved_executed_code_cells": 1,
+      "original_outputs": 1,
+      "organized_outputs": 1,
+      "original_image_outputs": 0
+    },
+    {
+      "original_path": "yolo/05E_compare_all_results.ipynb",
+      "organized_path": "notebooks/05E_compare_all_results.ipynb",
+      "original_sha256": "68ead6e13efd246023e2165402ae48ea0e4c3aaaa1f9a57ae816ffa3e94b5abc",
+      "organized_sha256": "7547375a4ea86ee805c65410719098255609894ad7c14655e95225ec5d56a5e3",
+      "cells": 9,
+      "code_cells": 7,
+      "saved_executed_code_cells": 7,
+      "original_outputs": 12,
+      "organized_outputs": 12,
+      "original_image_outputs": 2
+    },
+    {
+      "original_path": "yolo/scripts/06A_convert_coco_to_yolo_seg.py",
+      "organized_path": "scripts/06A_convert_coco_to_yolo_seg.py",
+      "original_sha256": "1f562fa6230ddea28c089420a0c29365e0c1db52ec5c027c022ac1bc07753475",
+      "organized_sha256": "2e872b5dbc11216de55188dc44eddcb66de49c23fbf82289ad39c71d3360c7dc"
+    },
+    {
+      "original_path": "yolo/scripts/06B_build_roi_crop_pipeline.py",
+      "organized_path": "scripts/06B_build_roi_crop_pipeline.py",
+      "original_sha256": "80e78615d8de971e520c46884ce546e8c1483932d1a38c031d774ec69a2c5794",
+      "organized_sha256": "80e78615d8de971e520c46884ce546e8c1483932d1a38c031d774ec69a2c5794"
+    },
+    {
+      "original_path": "yolo/scripts/06C_roi_crop_cascade.py",
+      "organized_path": "scripts/06C_roi_crop_cascade.py",
+      "original_sha256": "2fb506cfb44c982c733fbe4863dbf2e3b2f499ecc3d0e05f6bb27479d1f80cb8",
+      "organized_sha256": "2fb506cfb44c982c733fbe4863dbf2e3b2f499ecc3d0e05f6bb27479d1f80cb8"
+    }
+  ],
+  "byte_identical_duplicate_files": []
+}

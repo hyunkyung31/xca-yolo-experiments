@@ -1,0 +1,1316 @@
+[
+  {
+    "file": "01_dataset.ipynb",
+    "cell": 5,
+    "output": 1,
+    "action": "directory listing omitted; archived privately"
+  },
+  {
+    "file": "01_dataset.ipynb",
+    "cell": 12,
+    "output": 1,
+    "action": "directory listing omitted; archived privately"
+  },
+  {
+    "file": "01_dataset.ipynb",
+    "cell": 19,
+    "output": 1,
+    "action": "progress/training boilerplate reduced; metrics retained or extracted; raw output archived privately"
+  },
+  {
+    "file": "01_dataset.ipynb",
+    "cell": 30,
+    "output": 1,
+    "action": "medical image preserved privately; omitted from public copy"
+  },
+  {
+    "file": "01_dataset.ipynb",
+    "cell": 30,
+    "output": 2,
+    "action": "medical image preserved privately; omitted from public copy"
+  },
+  {
+    "file": "01_dataset.ipynb",
+    "cell": 30,
+    "output": 3,
+    "action": "medical image preserved privately; omitted from public copy"
+  },
+  {
+    "file": "01_dataset.ipynb",
+    "cell": 30,
+    "output": 4,
+    "action": "medical image preserved privately; omitted from public copy"
+  },
+  {
+    "file": "01_dataset.ipynb",
+    "cell": 30,
+    "output": 5,
+    "action": "medical image preserved privately; omitted from public copy"
+  },
+  {
+    "file": "02_preprocessing.ipynb",
+    "cell": 10,
+    "output": 3,
+    "action": "medical image preserved privately; omitted from public copy"
+  },
+  {
+    "file": "02_preprocessing.ipynb",
+    "cell": 22,
+    "output": 1,
+    "action": "medical image preserved privately; omitted from public copy"
+  },
+  {
+    "file": "02_preprocessing.ipynb",
+    "cell": 25,
+    "output": 1,
+    "action": "medical image preserved privately; omitted from public copy"
+  },
+  {
+    "file": "02_preprocessing.ipynb",
+    "cell": 27,
+    "output": 1,
+    "action": "medical image preserved privately; omitted from public copy"
+  },
+  {
+    "file": "02_preprocessing.ipynb",
+    "cell": 29,
+    "output": 1,
+    "action": "medical image preserved privately; omitted from public copy"
+  },
+  {
+    "file": "02_preprocessing.ipynb",
+    "cell": 32,
+    "output": 1,
+    "action": "medical image preserved privately; omitted from public copy"
+  },
+  {
+    "file": "02_preprocessing.ipynb",
+    "cell": 34,
+    "output": 1,
+    "action": "medical image preserved privately; omitted from public copy"
+  },
+  {
+    "file": "02_preprocessing.ipynb",
+    "cell": 35,
+    "output": 1,
+    "action": "medical image preserved privately; omitted from public copy"
+  },
+  {
+    "file": "02_preprocessing.ipynb",
+    "cell": 36,
+    "output": 1,
+    "action": "medical image preserved privately; omitted from public copy"
+  },
+  {
+    "file": "02_preprocessing.ipynb",
+    "cell": 37,
+    "output": 1,
+    "action": "medical image preserved privately; omitted from public copy"
+  },
+  {
+    "file": "02_preprocessing.ipynb",
+    "cell": 38,
+    "output": 1,
+    "action": "medical image preserved privately; omitted from public copy"
+  },
+  {
+    "file": "02_preprocessing.ipynb",
+    "cell": 40,
+    "output": 2,
+    "action": "medical image preserved privately; omitted from public copy"
+  },
+  {
+    "file": "02_preprocessing.ipynb",
+    "cell": 44,
+    "output": 1,
+    "action": "progress/training boilerplate reduced; metrics retained or extracted; raw output archived privately"
+  },
+  {
+    "file": "03.5_Data Preparation.ipynb",
+    "cell": 6,
+    "output": 1,
+    "action": "progress/training boilerplate reduced; metrics retained or extracted; raw output archived privately"
+  },
+  {
+    "file": "03_quality_metrics.ipynb",
+    "cell": 5,
+    "output": 2,
+    "action": "progress/training boilerplate reduced; metrics retained or extracted; raw output archived privately"
+  },
+  {
+    "file": "03_quality_metrics.ipynb",
+    "cell": 7,
+    "output": 1,
+    "action": "progress/training boilerplate reduced; metrics retained or extracted; raw output archived privately"
+  },
+  {
+    "file": "04_train_yolo(cursor).ipynb.ipynb",
+    "cell": 7,
+    "output": 1,
+    "action": "progress/training boilerplate reduced; metrics retained or extracted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 1,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 3,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 5,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 7,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 9,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 11,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 13,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 15,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 17,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 19,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 21,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 23,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 25,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 27,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 29,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 31,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 33,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 35,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 37,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 39,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 41,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 43,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 45,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 47,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 49,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 51,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 53,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 55,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 57,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 59,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 61,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 63,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 65,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 67,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 69,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 71,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 73,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 75,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 77,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 79,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 81,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 83,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 85,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 87,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 89,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 91,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 93,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 95,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 97,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 99,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 101,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 103,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 105,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 107,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 109,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 111,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 113,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 115,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 117,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 119,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 121,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 123,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 125,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 127,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 129,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 131,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 133,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 135,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 137,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 139,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 141,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 143,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 145,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 147,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 149,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 151,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 153,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 155,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 157,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 159,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 161,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 163,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 165,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 167,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 169,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 171,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 173,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 175,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 177,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 179,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 181,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 183,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 185,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 187,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 189,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 191,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 193,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 195,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 197,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 7,
+    "output": 199,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 1,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 3,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 5,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 7,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 9,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 11,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 13,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 15,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 17,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 19,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 21,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 23,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 25,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 27,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 29,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 31,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 33,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 35,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 37,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 39,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 41,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 43,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 45,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 47,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 49,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 51,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 53,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 55,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 57,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 59,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 61,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 63,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 65,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 67,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 69,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 71,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 73,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 75,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 77,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 79,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 81,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 83,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 85,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 87,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 89,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 91,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 93,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 95,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 97,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 99,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 101,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 103,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 105,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 107,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 109,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 111,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 113,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 115,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 117,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 119,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 121,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 123,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 125,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 127,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 129,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 131,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 133,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 135,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 137,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 139,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 141,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 143,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 145,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 147,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 149,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 151,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 153,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 155,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 157,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 159,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 161,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 163,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 165,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 167,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 169,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 171,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 173,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 175,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 177,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 8,
+    "output": 179,
+    "action": "progress widget omitted; raw output archived privately"
+  },
+  {
+    "file": "05B_mmdet_swin_convnext.ipynb",
+    "cell": 11,
+    "output": 1,
+    "action": "progress/training boilerplate reduced; metrics retained or extracted; raw output archived privately"
+  },
+  {
+    "file": "05C_yolo11_custom_backbone_skeleton.ipynb",
+    "cell": 8,
+    "output": 1,
+    "action": "progress/training boilerplate reduced; metrics retained or extracted; raw output archived privately"
+  },
+  {
+    "file": "02_preprocessing.ipynb",
+    "cell": 7,
+    "output": 1,
+    "action": "individual source image ID/bbox geometry preserved privately; omitted from public copy"
+  },
+  {
+    "file": "02_preprocessing.ipynb",
+    "cell": 8,
+    "output": 1,
+    "action": "individual source image ID/bbox geometry preserved privately; omitted from public copy"
+  }
+]

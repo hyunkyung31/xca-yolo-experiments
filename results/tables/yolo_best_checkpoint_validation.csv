@@ -1,0 +1,7 @@
+experiment,epochs_recorded,images,instances,P,R,mAP50,mAP50-95,source_notebook,source_cell,selection
+yolo11n_original,100,200,406,0.364,0.387,0.32,0.121,04_train_yolo(cursor).ipynb.ipynb,7,final best.pt validation (rounded saved log)
+yolo11n_clahe,100,200,406,0.381,0.39,0.32,0.123,04_train_yolo(cursor).ipynb.ipynb,7,final best.pt validation (rounded saved log)
+yolo11n_clahe_gamma,100,200,406,0.381,0.387,0.33,0.127,04_train_yolo(cursor).ipynb.ipynb,7,final best.pt validation (rounded saved log)
+yolo11n__clahe_gamma,50,200,406,0.346,0.404,0.296,0.122,05B_mmdet_swin_convnext.ipynb,11,final best.pt validation (rounded saved log)
+yolo11s__clahe_gamma,50,200,406,0.356,0.401,0.31,0.121,05B_mmdet_swin_convnext.ipynb,11,final best.pt validation (rounded saved log)
+yolo11n_Ctrack_clahe_gamma,50,200,406,0.346,0.404,0.296,0.122,05C_yolo11_custom_backbone_skeleton.ipynb,8,final best.pt validation (rounded saved log)

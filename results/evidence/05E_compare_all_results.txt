@@ -1,0 +1,85 @@
+Historical saved outputs; not rerun during portfolio organization.
+Cell numbers are 1-based positions in the original notebook.
+Personal paths redacted; raw output objects preserved outside repository.
+
+## Cell 2, output 1 (stream)
+
+PROJECT <PROJECT_ROOT>
+FRCNN <PROJECT_ROOT>/tv_backbone_exps exists True
+YOLO <PROJECT_ROOT>/runs/detect exists True
+YOLO <PROJECT_ROOT>/tv_backbone_exps/yolo_scales exists False
+
+
+## Cell 4, output 1 (error)
+
+NameError: name 'load_frcnn_rows' is not defined
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[1], line 1
+----> 1 rows = load_frcnn_rows(FRCNN_ROOT) + load_yolo_rows(YOLO_RUNS)
+      2 df = pd.DataFrame(rows)
+      3
+      4 if df.empty:
+
+NameError: name 'load_frcnn_rows' is not defined
+
+## Cell 5, output 1 (stream)
+
+=== best per family ===
+
+
+## Cell 5, output 2 (display_data)
+
+  family                           exp         model     pipeline  \
+0  FRCNN  frcnn_resnet50_fpn__original  resnet50_fpn     original
+1   YOLO           yolo11n_clahe_gamma       yolo11n  clahe_gamma
+
+   metric_AP50  metric_AP50_95
+0     0.295686             NaN
+1     0.345780         0.12645
+
+## Cell 5, output 3 (stream)
+
+
+=== best per model ===
+
+
+## Cell 5, output 4 (display_data)
+
+                    model family     pipeline  \
+3                 yolo11n   YOLO  clahe_gamma
+4                 yolo11s   YOLO  clahe_gamma
+1            resnet50_fpn  FRCNN     original
+2         resnet50_fpn_v2  FRCNN  clahe_gamma
+0  mobilenet_v3_large_fpn  FRCNN  clahe_gamma
+
+                                         exp  metric_AP50
+3                        yolo11n_clahe_gamma     0.345780
+4                       yolo11s__clahe_gamma     0.309730
+1               frcnn_resnet50_fpn__original     0.295686
+2         frcnn_resnet50_fpn_v2__clahe_gamma     0.268508
+0  frcnn_mobilenet_v3_large_fpn__clahe_gamma     0.185888
+
+## Cell 6, output 2 (stream)
+
+saved <PROJECT_ROOT>/tv_backbone_exps/compare_all/compare_ap50.png
+
+
+## Cell 8, output 1 (stream)
+
+=== pivot AP50 (model x pipeline) ===
+
+
+## Cell 8, output 2 (display_data)
+
+pipeline                 clahe  clahe_gamma  original
+model
+mobilenet_v3_large_fpn     NaN       0.1859       NaN
+resnet50_fpn               NaN       0.2909    0.2957
+resnet50_fpn_v2            NaN       0.2685       NaN
+yolo11n                 0.3296       0.3458    0.3193
+yolo11s                    NaN       0.3097       NaN
+
+## Cell 8, output 3 (stream)
+
+saved <PROJECT_ROOT>/tv_backbone_exps/compare_all/pivot_ap50_model_x_pipeline.csv
