@@ -1,61 +1,178 @@
-# 실험별 목적·방법·결과·해석
+# XCA 협착 탐지 실험일지
 
-사용자 제공 ZIP의 노트북 11개와 Python 스크립트 3개를 모두 검토했습니다. 아래 결과는 **저장된 실행 기록** 기준이며 정리 과정에서 재학습한 결과가 아닙니다. 셀은 1-based 원본 위치입니다. 코드 내용, 실행 번호, 저장된 출력은 서로 다른 시점일 수 있으므로 완전한 실행 이력을 단정하지 않습니다.
+데이터를 살펴보는 작업부터 전처리, YOLO 학습, 추가 모델 비교까지 진행한 내용을 단계별로 정리했다. 노트북 11개와 Python 스크립트 3개에 남아 있는 수치와 오류를 기준으로 썼으며, 이번 문서 정리에서 다시 학습하지는 않았다. 아래의 셀 번호는 원본에서 1부터 세는 위치다.
 
-상태 정의: **완료 기록 확인**은 관련 실행의 완료 출력/지표가 존재한다는 뜻입니다. **실패 기록**은 오류 또는 검증 CHECK 출력이 존재한다는 뜻입니다. **미완료/실행 확인 불가**는 출력이 없거나 필요한 학습·평가 증거가 없다는 뜻입니다. 실행 완료와 성능 개선 성공은 구분합니다.
+코드와 출력이 같은 시점에 저장된 것은 아닐 수 있다. 그래서 학습 결과가 있는 작업, 실행 중 오류가 난 작업, 코드만 있고 결과가 없는 작업을 나누어 적었다. 학습을 끝낸 것과 성능이 좋아진 것도 구분했다.
 
-## 전체 흐름
+## 1. 데이터를 먼저 살펴보기
 
-| 자료 | 목적 | 방법 | 실제 결과·근거 | 상태와 해석 |
-|---|---|---|---|---|
-| `01_dataset.ipynb` | 데이터 규모·협착 bbox 특성 파악 | COCO 탐색, category count, bbox histogram, 5개 이미지 bbox/polygon 시각화 | cell 15/16: train 1000장, annotation 1625. cell 21: category 26만 1625개. cell 25/31: 평균 면적 4836.93, 중앙값 2782.64 px² | 분석 완료 기록 확인. cell 8의 전체 3000장은 stenosis train 수가 아님. 의료영상 출력 5개는 비공개 보존 |
-| `02_preprocessing.ipynb` | 국소 대비·혈관 강조 후보 비교 | CLAHE/Gamma/Frangi/조합/Black-hat; Unsharp/Top-hat 탐색. ROI padding 40으로 육안 비교, CLAHE clip×tile grid 탐색 | cell 40: clip 2.0, tile (4,4), gamma 0.8, sigmas 1..4, kernel 15. cell 44/45: 7종 모두 train=1000, val=200 출력 | 전처리 배치 완료 기록 확인. Unsharp/Top-hat은 7종 배치/YOLO 성능 실험으로 간주하지 않음. 의료영상 포함 시각화 12개 비공개 |
-| `03_quality_metrics.ipynb` | 전처리 품질을 정량화 | entropy/std contrast/Canny edges/Laplacian/Brenner, 전체·GT ROI 평균 | cell 5: train 1000개 평가 완료. cell 7: 8개 파이프라인 평균 표·그래프. CLAHE ROI contrast 34.135542, 원본 17.958918 | train 품질 평가 완료 기록 확인. cell 9 rank/composite 계산은 미실행. sharpness 지표가 높아도 노이즈일 수 있음 |
-| `03.5_Data Preparation.ipynb` | 전처리/원본 images와 YOLO detect labels 생성 | class 26→0, bbox 정규화, 파이프라인별 복사 | cell 6: 원본 train=1000,val=200. cell 8: train boxes=1625, empty=3; val boxes=406, empty=0. cell 10: 전처리 6종 val 이미지=0, label=200 CHECK | 준비 일부 실패 기록. 초기 경로/복사 셀은 실행 번호 없음. 현재 코드에 있는 Black-hat은 해당 출력표에 없어서 당시 처리 여부 확인 필요. 원본은 OK; 선택 2종은 `04`에서 복구 기록 |
-| `03.6_coco_to_yolo_seg.ipynb` | COCO polygon → YOLO instance segmentation labels | converter 생성/import, 통계 확인, split별 label 저장 | 모든 코드 셀의 execution_count=null, outputs 없음 | 실행 확인 불가. markdown의 train/val 기대치는 실제 segmentation 결과가 아님. 실제 mask 검수·학습·평가는 미완료 |
-| `04_train_yolo(cursor).ipynb.ipynb` | 전처리 효과를 동일 YOLO11n에서 비교 | selected 3종 이미지 동기화, dataset check, pretrained YOLO11n, 100 epoch, imgsz640,batch16,seed42 | cell 4: CLAHE/CG train1000,val200 복사. cell 5/6: 3종 ready=True. cell 7: 3회 100 epoch 완료 및 best.pt 최종 검증 | 학습 완료 기록 확인. Original→CG mAP50-95 0.121→0.127. 데이터/weights가 없어 새 환경에서 재현 여부 확인 필요 |
-| `05A_yolo11_result_aggregation.ipynb` | 전처리 비교표·그래프 집계 | CSV 최고 mAP50-95 epoch 선택 후 `use_manual=True`로 최종 validation 값 override | cell 3: best epoch 74/86/90, mAP50-95 0.12102/0.12320/0.12703. cell 4/5/6: manual 0.121/0.123/0.127, CG 상대+4.96% | 집계 완료 기록 확인. 실제 원본 CSV 미포함. override는 `04` 최종 검증과 대조 완료; 두 표는 선택 방식이 다르므로 따로 보존 |
-| `05B_mmdet_swin_convnext.ipynb` | 탐지기/모델 크기 비교 | 실제 구현은 torchvision Faster R-CNN; VOC 11-point AP50. YOLO11n/s 50 epoch도 실행 | cell 7: ResNet50+CG 100 epoch, 최대0.3109045754. cell 8: ResNet50 Original/CG, ResNet-v2 CG 각30 epoch. cell 11: n/s 각50 epoch 완료 | 실행 완료 기록 확인. 파일명과 달리 MMDetection Swin/ConvNeXt 학습 없음. 여러 실행에서 결과 폴더 재사용. matrix에서는 CG가 Original보다 낮음 |
-| `05C_yolo11_custom_backbone_skeleton.ipynb` | 외부 backbone 인터페이스 탐색 | ConvNeXt/Swin/ViT 이름의 convolution stub, TinyFPN, YOLO baseline, 랜덤 입력/타깃 MSE toy train | cell 3: feature shape 출력. cell 6: Swin stub toy 출력. cell 8: 실제 YOLO11n baseline 50 epoch 완료, 최종mAP50-95=0.122. cell 9: toy loss 4.5122→2.0322→1.2110 | baseline 완료 기록, stub smoke 기록 확인. 실제 Swin transformer/ConvNeXt/ViT 탐지 모델 통합 아님. 랜덤 데이터 loss는 협착 성능 수치가 아님 |
-| `05D_backbone_experiment_matrix.ipynb` | 확장 본실험 matrix 설계 | AdamW/CosineAnnealingLR, ResNet/MobileNet matrix, YOLO·ConvNeXt 옵션 | cell 4: `NameError: name 'random' is not defined`. 다른 코드 셀 outputs 없음 | 실패 기록/본실험 미완료. import 정의 셀 미실행. CG 경로가 `02_clahe_gamma`로 되어 있어 실제 `04_clahe_gamma`와 불일치. negative 이미지 선택도 05B와 다름 |
-| `05E_compare_all_results.ipynb` | 여러 모델 결과 한 번에 비교 | FRCNN AP50, YOLO 최고 mAP50 epoch 집계, family leader, pivot/그래프 | cell 4: `NameError: name 'load_frcnn_rows' is not defined`. cell 5~8: 표·그래프 있음. YOLO leader mAP50 0.345780, 같은 epoch mAP50-95 0.12645 | 집계 실패 기록과 후속 출력 공존. 전체 최신 실행 성공 확인 불가. 출력은 보존하되 새 실행 결과로 단정하지 않음. 서로 다른 평가 방식/선택 규칙 주의 |
-| `06A_convert_coco_to_yolo_seg.py` | 독립 segmentation 변환기 | category26→0, crowd/RLE/잘못된 polygon 스킵, 좌표 정규화, 파이프라인 mirror | 코드 구현만 제공됨; ARCADE 실행 결과 없음 | 실제 실험 확인 필요. 정리 시 synthetic COCO 기능 검증을 수행했으며 의료 데이터 실험 결과와 구분 |
-| `06B_build_roi_crop_pipeline.py` | 작은 병변 확대 학습 데이터 준비 | GT polygon bbox 군집, extent 제한, padding crop, 640 resize, polygon 재정규화 | 실행 로그·생성 이미지·탐지 성능 수치 없음 | 실제 실험 미완료/확인 필요. background를 건너뛰고 GT 기반 crop을 생성하므로 full-image 검증과 직접 비교 불가 |
-| `06C_roi_crop_cascade.py` | 추론에서 2단계 확대 검출 | stage1 예측 군집→crop→stage2→좌표 역변환→NMS; TP/FP/FN helper | 모델/실행 로그/평가 수치 없음 | 실제 실험 미완료/확인 필요. stage1 무검출이면 종료하므로 놓친 병변을 stage2가 복구할 수 없음 |
+관련 노트북: `01_dataset.ipynb`
 
-## YOLO 세부 결과
+전처리에 앞서 협착 라벨이 어떻게 구성되어 있고 병변이 어느 정도 크기인지 살펴봤다. COCO JSON을 읽고 범주별 개수와 bbox 면적 분포를 확인한 다음, 이미지 5장에 bbox와 polygon을 겹쳐 표시했다.
 
-`results/tables/yolo_best_checkpoint_validation.csv`는 다음 로그를 그대로 추출한 파일입니다. Validation은 모두 200장·406 instance입니다.
+cell 15/16에는 학습 이미지 **1000장**, annotation **1625개**가 나온다. cell 21의 집계는 category 26의 협착 annotation만 1625개다. cell 25/31에서 bbox 면적 평균은 **4836.93 px²**, 중앙값은 **2782.64 px²**였다. 작은 병변 주변의 변화도 살펴볼 필요가 있어 이후 전처리 비교에서는 ROI를 함께 봤다.
 
-| 원본·셀 | 실험 | epoch 완료 기록 | P | R | mAP50 | mAP50-95 |
+cell 8의 총 **3000장**은 데이터 전체 검색 결과라 협착 학습 이미지 수와는 다르다. 이 데이터 분석에는 실행 결과가 남아 있다. 시각화한 의료영상 5장은 공개 권한을 확인하기 전까지 로컬에만 보존했다.
+
+## 2. 병변 주변의 대비와 혈관 강조 방법 비교하기
+
+관련 노트북: `02_preprocessing.ipynb`
+
+같은 병변을 두고 전처리별로 무엇이 달라지는지 보기 위해 bbox 주변을 padding **40**으로 잘랐다. CLAHE의 clipLimit과 tileGrid를 바꾸는 비교부터 Gamma, Frangi, Black-hat, 조합 전처리까지 시각화했다. Unsharp와 Top-hat도 탐색했다.
+
+cell 40의 최종 선택 값은 CLAHE clip **2.0**, tile **(4,4)**, Gamma **0.8**, Frangi sigmas **1..4**, Black-hat kernel **15**다. 이후 CLAHE, Gamma, Frangi, CLAHE+Gamma, CLAHE+Gamma+Frangi, Gamma+CLAHE+Frangi, Black-hat의 7종을 배치 처리했다. cell 44/45에는 각 전처리의 **train=1000, val=200**이 남아 있다.
+
+Unsharp와 Top-hat은 이 7종 배치 처리나 YOLO 학습 비교까지 진행한 항목은 아니다. 전처리와 ROI를 보여 주는 의료영상 포함 시각화 12개는 비공개로 보존했다.
+
+## 3. 눈으로 본 변화를 숫자로 확인하기
+
+관련 노트북: `03_quality_metrics.ipynb`
+
+육안 비교에 더해 영상 전체와 정답 bbox ROI에서 entropy, 표준편차 대비, Canny 경계 밀도, Laplacian variance, Brenner focus를 계산했다. cell 5에는 학습 이미지 **1000개**를 평가한 기록이 있고, cell 7에는 원본을 포함한 8개 전처리의 평균 표와 그래프가 있다.
+
+CLAHE의 ROI contrast는 **34.135542**, 원본은 **17.958918**이었다. 대비 지표에서는 차이가 있었지만, 선명도나 경계 지표가 커진 이유에 노이즈도 포함될 수 있다. 그래서 영상 품질 지표와 실제 탐지 결과를 나누어 비교했다.
+
+품질 지표 계산과 그래프에는 실행 결과가 남아 있다. 다만 cell 9의 순위·종합 점수 계산은 미실행이므로, 그 계산까지 끝냈다고 정리하지 않았다.
+
+## 4. YOLO 입력을 준비하면서 검증 이미지 누락 확인하기
+
+관련 노트북: `03.5_Data Preparation.ipynb`
+
+같은 라벨을 원본과 전처리 이미지에 사용할 수 있도록 COCO bbox를 YOLO 형식으로 정규화하고, category **26→0**으로 바꿨다. 각 전처리별 이미지와 라벨을 복사한 뒤 개수를 비교했다.
+
+cell 6에서 원본 이미지는 **train=1000, val=200**이었다. cell 8의 라벨 변환 결과는 학습 bbox **1625개**, 빈 라벨 **3개**, 검증 bbox **406개**, 빈 라벨 **0개**다.
+
+문제는 cell 10의 개수 확인에서 드러났다. 전처리 6종의 검증 이미지는 **0장**, 라벨은 **200개**여서 `CHECK`가 나왔다. 원본은 `OK`였지만 전처리 입력은 일부 준비가 빠진 상태였다. 초기 경로·복사 셀에는 실행 번호가 없고, 현재 코드에 있는 Black-hat도 당시 출력표에는 없어 처리 여부를 확인해야 한다.
+
+이 누락은 이후 `04`에서 학습에 사용할 CLAHE와 CLAHE+Gamma 이미지를 다시 동기화하며 해결한 기록이 있다. 다른 전처리까지 모두 복구했다고 볼 기록은 없다.
+
+## 5. 같은 YOLO11n으로 전처리 효과 비교하기
+
+관련 노트북: `04_train_yolo(cursor).ipynb.ipynb`, `05A_yolo11_result_aggregation.ipynb`
+
+영상 품질 지표와 탐지 결과가 같은 방향으로 움직이는지 보기 위해 Original, CLAHE, CLAHE+Gamma를 사전학습 YOLO11n에서 비교했다. 학습 설정은 **100 epoch, imgsz640, batch16, seed42**였다.
+
+`04` cell 4에서 CLAHE와 CLAHE+Gamma 이미지를 각각 **train1000, val200**으로 복사했다. cell 5/6에서 세 입력 모두 `ready=True`를 확인했고, cell 7에는 세 실험의 100 epoch 완료와 `best.pt` 최종 검증 로그가 남아 있다. 검증은 모두 **200장·406 instance**다.
+
+| 원본·셀 | 실험 | 완료 epoch | P | R | mAP50 | mAP50-95 |
 |---|---|---:|---:|---:|---:|---:|
 | 04 cell 7 | `yolo11n_original` | 100 | 0.364 | 0.387 | 0.320 | 0.121 |
 | 04 cell 7 | `yolo11n_clahe` | 100 | 0.381 | 0.390 | 0.320 | 0.123 |
 | 04 cell 7 | `yolo11n_clahe_gamma` | 100 | 0.381 | 0.387 | 0.330 | 0.127 |
-| 05B cell 11 | `yolo11n__clahe_gamma` | 50 | 0.346 | 0.404 | 0.296 | 0.122 |
-| 05B cell 11 | `yolo11s__clahe_gamma` | 50 | 0.356 | 0.401 | 0.310 | 0.121 |
-| 05C cell 8 | `yolo11n_Ctrack_clahe_gamma` | 50 | 0.346 | 0.404 | 0.296 | 0.122 |
 
-50 epoch와 100 epoch 조건을 합쳐 모델 크기 효과라고 표현하지 않습니다. 05B와 05C의 n 수치가 같아도 독립 반복 실험의 증거가 되지 않습니다. seed·설정·원본 산출물 확인이 필요합니다.
+이 비교에서 CLAHE+Gamma의 mAP50-95는 원본 **0.121→0.127**, 차이는 **0.006**, 상대 변화는 **+4.96%**였다. 품질 지표의 변화 폭만큼 탐지 지표가 크게 달라지지는 않았지만, 이 조건에서는 CLAHE+Gamma가 가장 높았다.
 
-## Faster R-CNN 세부 결과
+### 결과표를 만들면서 구분한 두 가지 수치
 
-epoch별 dict를 파싱한 값입니다. AP50은 자체 구현 VOC 11-point 방식입니다. 표시 값은 읽기 편하게 반올림했으며 정확한 값은 `frcnn_history_summary.csv`와 개별 history에 있습니다.
+`05A` cell 3은 CSV에서 최고 mAP50-95 epoch를 고른 표다. Original, CLAHE, CLAHE+Gamma 순서로 최고 epoch는 **74/86/90**, mAP50-95는 **0.12102/0.12320/0.12703**이었다.
+
+이후 cell 4의 `use_manual=True`는 최종 검증 로그의 **0.121/0.123/0.127** 등을 수동으로 넣었다. cell 5/6의 차이 계산과 그래프는 이 수치를 사용한다. 수동 입력 값은 `04` 최종 검증 로그와 일치하지만, 앞선 CSV 최고 epoch 표와는 선택 기준이 달라 따로 보존했다. 실제 원본 CSV와 학습 가중치는 ZIP에 없어 새 환경에서의 재현은 확인이 필요하다.
+
+## 6. Faster R-CNN과 YOLO 모델 크기 비교하기
+
+관련 노트북: `05B_mmdet_swin_convnext.ipynb`
+
+YOLO11n에서 전처리를 비교한 다음, 탐지기를 바꾸거나 모델 크기를 늘렸을 때도 같은 효과가 있는지 살펴봤다. 파일명에는 MMDetection, Swin, ConvNeXt가 들어 있지만 실제 구현과 실행 기록은 **torchvision Faster R-CNN**이다. 평가는 직접 구현한 VOC 11-point AP50을 사용했다.
+
+### Faster R-CNN 결과
+
+cell 7은 ResNet50-FPN+CLAHE+Gamma의 100 epoch 단일 실행, cell 8은 세 조합의 30 epoch 비교다. cell 7의 최대 AP50은 **0.3109045754**(소수 열 자리로 반올림)이고, 아래 표는 더 짧게 반올림했다. 더 정밀한 값과 epoch 기록은 `frcnn_history_summary.csv`와 개별 기록 CSV에 있다.
 
 | 원본·셀 | 모델·입력 | 기록된 epoch | 최고 epoch | 최대 AP50 | 마지막 AP50 |
 |---|---|---:|---:|---:|---:|
 | 05B cell 7 | ResNet50-FPN / CG 단일 실행 | 100 | 4 | 0.310905 | 0.284617 |
-| 05B cell 8 | ResNet50-FPN / Original matrix | 30 | 3 | 0.295686 | 0.255291 |
-| 05B cell 8 | ResNet50-FPN / CG matrix | 30 | 4 | 0.290947 | 0.234812 |
-| 05B cell 8 | ResNet50-FPN-v2 / CG matrix | 30 | 3 | 0.268508 | 0.216537 |
+| 05B cell 8 | ResNet50-FPN / Original 조합 비교 | 30 | 3 | 0.295686 | 0.255291 |
+| 05B cell 8 | ResNet50-FPN / CG 조합 비교 | 30 | 4 | 0.290947 | 0.234812 |
+| 05B cell 8 | ResNet50-FPN-v2 / CG 조합 비교 | 30 | 3 | 0.268508 | 0.216537 |
 | 05B cell 9 | MobileNetV3-FPN / CG 집계만 | 확인 필요 | 5(checkpoint metadata) | 0.185888(출력 정밀도) | 확인 필요 |
 
-CG 단일 실행과 matrix는 같은 폴더명을 사용합니다. `05B` cell 9/`05E`는 후속 파일 집계로 CG 값 0.290947을 보여 주며, 이전 100 epoch의 0.310905 기록과 합치지 않습니다. train loss 하락 중 validation AP가 최고치보다 낮아지는 기록은 일반화 문제 검토의 근거지만, 반복실험 없이 과적합의 원인을 확정하지 않습니다.
+여기서 CG는 CLAHE+Gamma다. 30 epoch 비교에서는 원본의 AP50이 CG보다 높았다. 학습을 끝낸 것과 전처리로 성능이 개선된 것은 다른 결과였다.
 
-## 성과와 미해결을 구분한 포트폴리오 설명
+100 epoch 단일 실행과 30 epoch CG 비교는 같은 폴더명을 사용했다. 이후 `05B` cell 9와 `05E`의 집계는 CG **0.290947**을 보여 주므로, 앞선 **0.310905** 기록과 합치지 않았다. MobileNet은 집계 표와 최고 가중치 epoch 5만 남아 있어 총 학습 epoch와 전체 로그를 추가로 확인해야 한다.
 
-- 확인된 개선: 동일 YOLO11n 100 epoch 비교에서 CLAHE+Gamma의 최종 validation mAP50-95가 원본보다 0.006 높습니다.
-- 기대와 달랐던 결과: train 영상 대비 개선이 탐지 지표의 같은 폭 개선으로 이어지지 않았습니다. Faster R-CNN matrix에서는 Original이 CG보다 높고, YOLO11s는 50 epoch 조건의 mAP50-95에서 n을 넘지 못했습니다.
-- 실행 실패: 전처리 val 이미지 누락, 05D/05E 선행 정의 셀 NameError. val 누락은 04의 선택 두 파이프라인에 한해 복구 기록이 있습니다.
-- 설계/미완료: 정식 Swin/ConvNeXt/ViT/InternImage 탐지 모델, segmentation 실제 실행/학습, ROI-crop/cascade 성능 검증.
-- 확인 필요: 데이터 권한·정확한 환경·원본 CSV/weights·환자 단위 split·test 평가·여러 seed·통일된 평가 프로토콜.
+학습 loss가 줄어드는 동안 검증 AP는 최고값보다 낮아지는 구간이 있다. 일반화 성능을 더 살펴볼 근거는 되지만, 이 기록만으로 과적합의 원인을 확정하기는 어렵다.
+
+### YOLO11n과 YOLO11s의 50 epoch 비교
+
+cell 11에서는 CLAHE+Gamma 입력으로 YOLO11n과 YOLO11s를 각각 50 epoch 학습했다. 두 실행 모두 완료 로그가 남아 있다.
+
+| 원본·셀 | 실험 | 완료 epoch | P | R | mAP50 | mAP50-95 |
+|---|---|---:|---:|---:|---:|---:|
+| 05B cell 11 | `yolo11n__clahe_gamma` | 50 | 0.346 | 0.404 | 0.296 | 0.122 |
+| 05B cell 11 | `yolo11s__clahe_gamma` | 50 | 0.356 | 0.401 | 0.310 | 0.121 |
+
+YOLO11s의 mAP50은 높았지만 mAP50-95에서는 n을 넘지 못했다. 모델을 크게 만든 효과는 어떤 지표로 비교하는지도 함께 봐야 했다. 앞의 100 epoch 전처리 비교와는 학습 길이가 다르므로 한 조건처럼 묶지 않았다.
+
+Faster R-CNN의 AP50과 Ultralytics mAP50도 평가 방식이 달라 직접적인 종합 순위로 해석하지 않았다.
+
+## 7. 커스텀 backbone 연결을 위한 모의 실험
+
+관련 노트북: `05C_yolo11_custom_backbone_skeleton.ipynb`
+
+외부 backbone을 연결하기 위한 인터페이스를 살펴보면서 ConvNeXt·Swin·ViT 이름의 합성곱 스켈레톤과 TinyFPN을 만들었다. cell 3에는 특징 맵 크기, cell 6에는 Swin 이름의 모의 탐지기 출력이 남아 있다. 실제 Swin transformer나 정식 ConvNeXt·ViT 탐지 모델을 연결한 것은 아니다.
+
+cell 9는 랜덤 이미지와 랜덤 타깃으로 MSE 회귀를 실행한 작업이다. loss는 **4.5122→2.0322→1.2110**으로 줄었지만, 이 값은 협착 탐지 성능을 의미하지 않는다. 인터페이스를 시험하는 모의 학습 결과로 남겼다.
+
+같은 노트북의 cell 8에는 별도로 기존 YOLO11n을 50 epoch 학습한 기준 결과가 있다. 이 결과를 커스텀 backbone 학습 결과로 쓰지 않았다.
+
+| 원본·셀 | 실험 | 완료 epoch | P | R | mAP50 | mAP50-95 |
+|---|---|---:|---:|---:|---:|---:|
+| 05C cell 8 | `yolo11n_Ctrack_clahe_gamma` | 50 | 0.346 | 0.404 | 0.296 | 0.122 |
+
+`05B`의 n 수치와 같지만 독립적인 반복 실험의 근거로 보기는 어렵다. seed·설정·원본 산출물 확인이 필요하다. 정식 Swin·ConvNeXt·ViT·InternImage 탐지 모델의 통합과 학습은 미완료다.
+
+## 8. 확장 비교와 결과 집계에서 남은 오류
+
+### 본실험 조합을 확장하려던 작업
+
+관련 노트북: `05D_backbone_experiment_matrix.ipynb`
+
+ResNet과 MobileNet 비교를 확장할 수 있도록 AdamW와 CosineAnnealingLR을 사용하는 학습 코드를 구성했다. YOLO와 ConvNeXt 선택 코드도 있지만, 본실험 결과는 남아 있지 않다.
+
+cell 4에는 **`NameError: name 'random' is not defined`**가 있다. 선행 import 정의 셀은 실행하지 않은 상태이며, 다른 코드 셀에는 출력이 없다. 따라서 이 노트북의 본실험은 미완료로 남겼다.
+
+경로도 점검이 필요하다. CLAHE+Gamma를 `02_clahe_gamma`로 참조하지만 실제 전처리 폴더는 `04_clahe_gamma`다. 정답 병변이 없는 이미지 선택 방식도 `05B`와 다르다. 이 부분을 해결하지 않은 상태에서 같은 조건의 비교라고 볼 수는 없다.
+
+### 여러 모델의 결과를 한 번에 모으려던 작업
+
+관련 노트북: `05E_compare_all_results.ipynb`
+
+Faster R-CNN의 AP50과 YOLO의 최고 mAP50 epoch를 모아 모델별 표와 그래프를 만들었다. 다만 cell 4에는 **`NameError: name 'load_frcnn_rows' is not defined`**가 있고, cell 5~8에는 후속 표와 그래프가 함께 남아 있다. 처음부터 전체를 실행해 성공했는지는 확인이 필요하다.
+
+후속 집계의 YOLO 최고 mAP50은 **0.345780**, 같은 epoch의 mAP50-95는 **0.12645**였다. `05A`는 최고 mAP50-95 epoch를 고르므로 이 둘을 그 표의 수치와 섞지 않았다. 오류와 후속 출력 모두 보존했고, 새로운 실행이 성공한 결과로 표현하지 않았다.
+
+## 9. Segmentation 라벨과 ROI 확대를 위한 후속 구현
+
+작은 병변을 확대하는 방식은 별도 데이터 준비와 추론 과정이 필요하다. 아래 작업에는 코드가 있지만 실제 ARCADE 학습·평가 결과는 없다.
+
+### COCO polygon을 YOLO segmentation 라벨로 변환하기
+
+관련 자료: `03.6_coco_to_yolo_seg.ipynb`, `06A_convert_coco_to_yolo_seg.py`
+
+`03.6`은 변환기를 생성하거나 불러와 polygon을 정규화하고 split별 라벨을 저장하는 구성이다. 모든 코드 셀의 `execution_count=null`이고 출력이 없어 실행 여부를 확인할 수 없다. 본문에 적힌 학습·검증 데이터 기대치는 실제 segmentation 변환 결과가 아니다. 실제 mask 검수·학습·평가는 미완료다.
+
+독립 스크립트 `06A`는 category **26→0** 변환, crowd·RLE·잘못된 polygon 제외, 좌표 정규화와 전처리별 라벨 복사를 구현한다. 정리 과정에서 합성 COCO 데이터로 기능을 검증했지만, 실제 ARCADE 변환 결과가 추가된 것은 아니다.
+
+### 정답 병변 주변을 잘라 학습 입력 만들기
+
+관련 스크립트: `06B_build_roi_crop_pipeline.py`
+
+정답 polygon의 bbox를 가까운 병변끼리 묶고, 군집 크기를 제한한 뒤 여백을 포함해 자르는 코드다. 이미지를 **640** 크기로 조정하고 polygon 좌표를 crop 기준으로 다시 정규화한다.
+
+실제 실행 로그·생성 이미지·탐지 성능 수치는 없다. 배경 이미지를 건너뛰고 정답을 사용해 자르므로, 이 입력의 평가를 전체 영상 탐지 결과와 바로 비교할 수는 없다.
+
+### 추론에서도 예측 영역을 확대해 다시 탐지하기
+
+관련 스크립트: `06C_roi_crop_cascade.py`
+
+첫 모델의 예측 bbox를 군집으로 묶어 자르고, 두 번째 모델로 다시 탐지한 뒤 좌표를 원본 영상으로 돌려 NMS로 합치는 2단계 구조다. TP·FP·FN 계산 함수도 포함되어 있다.
+
+두 모델의 실행 로그나 평가 수치는 없어 실제 실험은 확인이 필요하다. 첫 단계에서 아무 병변도 찾지 못하면 종료하므로, 놓친 병변을 두 번째 단계에서 복구할 수 없는 한계도 있다. 정답으로 자르는 학습 입력과 예측으로 자르는 추론 입력의 차이를 함께 평가해야 한다.
+
+## 10. 이번 기록에서 정리한 점과 다음 확인
+
+YOLO11n의 100 epoch 비교에서는 CLAHE+Gamma의 최종 mAP50-95가 원본보다 **0.006** 높았다. 하지만 영상 대비가 높아진 만큼 탐지 성능도 높아진 것은 아니었다. Faster R-CNN의 30 epoch 비교는 원본이 더 높았고, YOLO11s도 50 epoch 조건에서 n의 mAP50-95를 넘지 못했다.
+
+검증 이미지 누락은 `04`에서 선택한 두 전처리를 동기화하며 해결했다. 반면 `05D`·`05E`의 실행 오류와 경로 문제, 커스텀 backbone 통합, segmentation과 ROI 확대 성능 검증은 남은 작업이다. 결과가 있는 비교와 구현만 진행한 작업을 함께 적어두는 것이 이 실험의 현재 범위를 설명하는 데 필요했다.
+
+데이터 공개 권한, 정확한 실행 환경, 원본 CSV·학습 가중치, 환자 단위 분할, 별도 test 평가, 여러 seed의 반복 비교와 공통 평가 방식은 추가 확인이 필요하다. 관련 기술적인 점검 내용은 [재현성 문서](reproducibility.md), 수치별 출처는 [결과 설명](../results/README.md)에 남겼다.
